@@ -8,14 +8,15 @@ Item {
 
 	id: stepDelegateItem
 	x: 10
-	//height: 40 //chair === selectedChair ? 40 : -40 //selectedCategory in model ? 40 : 0
+	implicitHeight: 25 //chair === selectedChair ? 40 : -40 //selectedCategory in model ? 40 : 0
 	width: parent.width - 20
 	visible: true //chair === selectedChair ? true : false //selectedCategory in model ? true : false
 
 	Text {
 		id: stepNameText
 		text: name
-		wrapMode: Text.WordWrap
+		//		wrapMode: Text.WordWrap
+		elide: Text.ElideRight
 		width: parent.width - 80
 		anchors.top: stepCatRow.bottom
 		anchors.topMargin: 4
@@ -71,7 +72,8 @@ Item {
 		anchors.right: stepDelegateItem.right
 		anchors.rightMargin: studentStepListView.x
 		id: checkStep
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: parent.top
+		anchors.topMargin: 0
 		onCheckedChanged: timer.start()
 		checkBoxSize: Theme.isDesktop === true ? 30 : undefined
 		iconSize: Theme.isDesktop === true ? 20 : undefined
@@ -85,8 +87,8 @@ Item {
 
 	Rectangle {
 		id: seperatorRect
-		anchors.top: checkStep.bottom
-		anchors.topMargin: 4
+		anchors.top: stepNameText.bottom
+		anchors.topMargin: 10
 		height: 2
 		width: parent.width
 		color: "black"

@@ -333,6 +333,42 @@ Page {
 				left: walkFilterCheckBox.left
 			}
 		}
+
+		Row {
+			id: filterButtonsRowId
+			anchors.top: cleanFilterCheckBox.bottom
+			anchors.topMargin: 30
+			anchors.horizontalCenter: parent.horizontalCenter
+			AppButton {
+				id: clearFiltersButtonId
+				text: "Clear All"
+				onClicked: {
+					identityFilterCheckBox.checked = false
+					walkFilterCheckBox.checked = false
+					talkFilterCheckBox.checked = false
+					feedFilterCheckBox.checked = false
+					cleanFilterCheckBox.checked = false
+				}
+			}
+			AppButton {
+				id: markAllFiltersButtonId
+				text: "Check All"
+				onClicked: {
+					identityFilterCheckBox.checked = true
+					walkFilterCheckBox.checked = true
+					talkFilterCheckBox.checked = true
+					feedFilterCheckBox.checked = true
+					cleanFilterCheckBox.checked = true
+				}
+			}
+		}
+
+		Item {
+			id: dialogSpacer
+			height: 30
+			anchors.top: filterButtonsRowId.bottom
+			anchors.topMargin: 2
+		}
 	}
 
 	SortFilterProxyModel {
