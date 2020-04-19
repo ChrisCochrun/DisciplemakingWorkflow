@@ -104,6 +104,7 @@ DISTFILES += \
 	ios/Assets.xcassets/LaunchImage.launchimage/Default768x1024.png \
 	qml/AddStepDialog.qml \
 	qml/ChairProgressBar.qml \
+	qml/LoginPage.qml \
 	qml/Main.qml \
 	qml/StepListDelegate.qml \
 	qml/StepListModel.qml \

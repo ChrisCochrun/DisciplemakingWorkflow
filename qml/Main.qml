@@ -11,6 +11,7 @@ App {
 	//licenseKey: "<generate one from https://felgo.com/licenseKey>"
 	property string selectedStudentName: ""
 	property bool showListSearch: false
+	property bool isLoggedIn: false
 
 	Component.onCompleted: {
 		HttpRequest.get("http://httpbin.org/get").timeout(5000).then(
@@ -25,14 +26,23 @@ App {
 					})
 	}
 
-	TabControl {
+	Navigation {
+		navigationMode: navigationModeTabsAndDrawer
 		tabPosition: Qt.BottomEdge
+
 		NavigationItem {
 			title: qsTr("Student List")
-			icon: IconType.home
+			icon: IconType.users
+			showInDrawer: false
 			NavigationStack {
 				id: studentNavigationStack
 				splitView: tablet
+
+				Component.onCompleted: {
+					if (!isLoggedIn) {
+						studentNavigationStack.push(LoginPage)
+					}
+				}
 
 				StudentListView {
 					id: studentListPageId
@@ -53,10 +63,18 @@ App {
 		NavigationItem {
 			title: qsTr("Steps")
 			icon: IconType.tasks
+			showInDrawer: false
 			NavigationStack {
 				StepsListView {}
 			}
 		}
+		//			NavigationItem {
+		//				title: qsTr("Login")
+		//				icon: IconType.globe
+		//				NavigationStack {
+		//					LoginPage {}
+		//				}
+		//			}
 	}
 	Component {
 		id: studentDetailPageComponent
