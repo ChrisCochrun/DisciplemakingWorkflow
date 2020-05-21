@@ -1,5 +1,14 @@
 <RCC>
     <qresource prefix="/">
         <file>qml</file>
+        <file>views</file>
+        <file>qml/models/StepListModel.qml</file>
+        <file>qml/models/StudentListModel.qml</file>
+        <file>qml/views/AddStepDialog.qml</file>
+        <file>qml/views/ChairProgressBar.qml</file>
+        <file>qml/views/LoginPage.qml</file>
+        <file>qml/views/StepsListView.qml</file>
+        <file>qml/views/StudentDetailPage.qml</file>
+        <file>qml/views/StudentListView.qml</file>
     </qresource>
 </RCC>

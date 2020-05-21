@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.12
 import Felgo 3.0
-import QtWebKit 3.0
+import QtWebView 1.1
 
 
 /*
@@ -28,18 +28,21 @@ Page {
 	id: loginPage
 	title: "Login"
 
-	NavigationBar {
-		leftBarItem: NavigationBarItem {
-			IconButton {
-				anchors.fill: parent
-				icon: IconType.caretleft
-				color: Theme.platform === "ios" ? "blue" : "white"
-				onClicked: mainNavigationStack.pop()
+	Navigation {
+		NavigationBar {
+			leftBarItem: NavigationBarItem {
+				IconButton {
+					anchors.fill: parent
+					icon: IconType.caretleft
+					color: Theme.platform === "ios" ? "blue" : "white"
+					onClicked: loginWebView.goBack()
+				}
 			}
 		}
-	}
 
-	WebView {
-		url: "https://login.microsoftonline.com/e47b9bb7-1701-400e-9cbd-195c9cfda2c2/oauth2/v2.0/authorize?client_id=314d38d1-2be6-4592-9de7-803eda22a3ea&response_type=code&redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient&response_mode=query&scope=offline_access%20user.read%20profile%20sites.manage.all%20sites.readwrite.all"
+		WebView {
+			id: loginWebView
+			url: "https://microsoft.com"
+		}
 	}
 }

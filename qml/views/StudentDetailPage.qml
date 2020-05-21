@@ -1,7 +1,10 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
+import QtGraphicalEffects 1.0
 import Felgo 3.0
+import "../"
+import "../models"
 
 Page {
 	id: studentDetailPage
@@ -14,40 +17,53 @@ Page {
 	property bool cleanFilter: true
 	property var selectedChair: "Chair 2"
 
-	AppImage {
+	rightBarItem: NavigationBarItem {
+		IconButtonBarItem {
+			icon: IconType.filter
+			anchors.right: parent.right
+			anchors.verticalCenter: parent.verticalCenter
+			anchors.rightMargin: dp(6)
+			color: Theme.platform === "ios" ? "blue" : "white"
+        onClicked: filterCategoriesDialog.open()
+		}
+	}
+
+	RoundedImage {
 		id: studentImage
 		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.top: parent.top
+		anchors.topMargin: dp(10)
 		width: parent.width / 3
 		height: width
-		fillMode: Image.PreserveAspectFit
-		source: "assets/frodo.jpg"
-		defaultSource: "felgo-logo.png"
+		fillMode: Image.PreserveAspectCrop
+		source: "../../assets/frodo.jpg"
+		radius: width / 2
 	}
 
 	AppText {
 		id: studentChairLabel
 		anchors.top: studentImage.bottom
-		anchors.topMargin: 4
-		text: qsTr("Chair 2")
+		anchors.topMargin: dp(14)
 		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: 12
+		fontSize: sp(12)
+		text: qsTr("Chair " + selectedStudent.Chair)
 	}
 
 	AppText {
 		id: warningTextId
-		text: qsTr("This is only to be used as an estimate!")
 		anchors.top: studentChairLabel.bottom
 		anchors.topMargin: 2
 		anchors.horizontalCenter: parent.horizontalCenter
 		fontSize: 12
+		text: qsTr("This is only to be used as an estimate!")
 	}
 	AppText {
 		id: studentChairProgress
 		anchors.top: warningTextId.bottom
 		anchors.topMargin: 2
-		text: qsTr("70% to Chair 3")
 		anchors.horizontalCenter: parent.horizontalCenter
 		fontSize: 12
+		text: qsTr("70% to Chair " + (selectedStudent.Chair + 1))
 	}
 	ChairProgressBar {
 		id: chairProgressBarId
@@ -61,28 +77,19 @@ Page {
 		id: filterLabel
 		text: qsTr("Filter: ")
 		font.bold: true
-		font.pointSize: 15
+		font.pointSize: sp(15)
 		anchors.verticalCenter: catComboBox.verticalCenter
 		anchors.left: frame.left
-		anchors.leftMargin: 10
-	}
-
-	Button {
-		id: catComboBox
-		anchors.right: frame.right
-		anchors.top: chairProgressBarId.bottom
-		anchors.topMargin: 30
-		text: "Categories"
-
-		onClicked: filterCategoriesDialog.open()
+		anchors.leftMargin: dp(10)
 	}
 
 	ComboBox {
 		id: chairComboBox
 		anchors.right: frame.right
-		anchors.rightMargin: 200
+		anchors.rightMargin: dp(10)
 		anchors.top: catComboBox.top
-		height: Math.min(width / 2, undefined)
+		height: width / 2
+		width: dp(80)
 		model: ["Chair 2", "Chair 1", "Chair 3"]
 		onCurrentTextChanged: selectedChair = currentText
 	}
@@ -99,11 +106,11 @@ Page {
 
 		AppListView {
 			id: studentStepListView
-			x: 0
-			y: 20
 			width: parent.width - 21
 			height: frame.availableHeight - y - 10
 			anchors.horizontalCenterOffset: 6
+			anchors.top: parent.top
+			anchors.topMargin: 10
 			spacing: 40
 			anchors.horizontalCenter: parent.horizontalCenter
 			currentIndex: 0
@@ -115,25 +122,55 @@ Page {
 	}
 
 	RoundButton {
-		id: roundButton
+		property alias cursorShape: mouseArea.cursorShape
+
+		id: floatingButtonId
+		icon.source: IconType.plus
 		anchors.bottom: parent.bottom
-		anchors.bottomMargin: 50
 		anchors.right: parent.right
-		anchors.rightMargin: 50
-		width: parent.width / 9
+		anchors.rightMargin: dp(20)
+		anchors.bottomMargin: dp(20)
+		Icon {
+			icon: IconType.plus
+			anchors.centerIn: parent
+			color: "white"
+			size: dp(24)
+		}
+		background: Rectangle {
+			implicitHeight: parent.implicitHeight
+			implicitWidth: parent.implicitWidth
+			radius: parent.radius
+			color: floatingButtonId.pressed ? "#17598E" : "#1C77C3"
+		}
+
+		width: dp(50)
 		height: width
-		text: "+"
-		font.bold: true
-		font.pointSize: 28
-		visible: Theme.isDesktop ? true : false
+
+		hoverEnabled: true
+		MouseArea {
+			id: mouseArea
+			anchors.fill: parent
+			onPressed: mouse.accepted = false
+			cursorShape: "PointingHandCursor"
+		}
 
 		onClicked: newStepDialog.open()
+	}
+
+	DropShadow {
+		source: floatingButtonId
+		anchors.fill: floatingButtonId
+		horizontalOffset: 3
+		verticalOffset: 3
+		samples: 6
+		radius: 9
+		color: "black"
 	}
 
 	FloatingActionButton {
 		id: facButtonId
 		icon: IconType.plus
-		visible: Theme.isDesktop ? false : true
+		visible: false //Theme.isDesktop ? false : true
 
 		onClicked: newStepDialog.open()
 	}
@@ -159,7 +196,7 @@ Page {
 			id: textEdit
 			anchors.top: nameLabel.bottom
 			anchors.topMargin: 10
-			width: 300
+			width: parent.width - 40
 			placeholderText: qsTr("New Step")
 			anchors.left: nameLabel.left
 			font.pixelSize: 12

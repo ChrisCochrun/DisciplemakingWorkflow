@@ -4,10 +4,7 @@ import Felgo 3.0
 
 Item {
 
-	property var newProxyStepModel: proxyStepModel
-
 	id: stepDelegateItem
-	x: 10
 	implicitHeight: 25 //chair === selectedChair ? 40 : -40 //selectedCategory in model ? 40 : 0
 	width: parent.width - 20
 	visible: true //chair === selectedChair ? true : false //selectedCategory in model ? true : false
@@ -17,14 +14,15 @@ Item {
 		text: name
 		//		wrapMode: Text.WordWrap
 		elide: Text.ElideRight
-		width: parent.width - 80
-		anchors.top: stepCatRow.bottom
-		anchors.topMargin: 4
+		  width: parent.width - 80
+		anchors.top: parent.top
+		anchors.topMargin: 2
 	}
 
 	Row {
 		id: stepCatRow
-		anchors.top: parent.top
+		anchors.top: stepNameText.top
+		anchors.topMargin: 20
 		spacing: 5
 		Text {
 			id: stepCatText
@@ -71,12 +69,13 @@ Item {
 	AppCheckBox {
 		anchors.right: stepDelegateItem.right
 		anchors.rightMargin: studentStepListView.x
+		visible: !onStepsPage
 		id: checkStep
 		anchors.top: parent.top
-		anchors.topMargin: 0
+		anchors.topMargin: 7
 		onCheckedChanged: timer.start()
-		checkBoxSize: Theme.isDesktop === true ? 30 : undefined
-		iconSize: Theme.isDesktop === true ? 20 : undefined
+		checkBoxSize: Theme.isDesktop === true ? 30 : 50
+		iconSize: Theme.isDesktop === true ? 20 : 30
 	}
 
 	Timer {
@@ -87,10 +86,10 @@ Item {
 
 	Rectangle {
 		id: seperatorRect
-		anchors.top: stepNameText.bottom
-		anchors.topMargin: 10
-		height: 2
+		anchors.top: stepCatRow.bottom
+		anchors.topMargin: 14
+		height: 1
 		width: parent.width
-		color: "black"
+		color: "lightgray"
 	}
 }

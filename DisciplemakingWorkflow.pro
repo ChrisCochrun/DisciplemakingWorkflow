@@ -107,12 +107,14 @@ DISTFILES += \
 	qml/LoginPage.qml \
 	qml/Main.qml \
 	qml/StepListDelegate.qml \
-	qml/StepListModel.qml \
+	qml/models/StepListModel.qml \
 	qml/StepsListView.qml \
 	qml/StudentDetailPage.qml \
 	qml/StudentListDelegate.qml \
-	qml/StudentListModel.qml \
+	qml/models/StudentListModel.qml \
 	qml/StudentListView.qml \
 	qml/config.json \
 	win/app_icon.ico \
 	win/app_icon.rc
+
+HEADERS +=

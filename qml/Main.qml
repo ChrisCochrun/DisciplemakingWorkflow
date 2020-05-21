@@ -1,5 +1,7 @@
 import Felgo 3.0
-import QtQuick 2.0
+import QtQuick 2.12
+import "views"
+import "models"
 
 App {
 
@@ -12,25 +14,31 @@ App {
 	property string selectedStudentName: ""
 	property bool showListSearch: false
 	property bool isLoggedIn: false
+	property bool onStepsPage: false
+	property var studentJsonData: []
+  property var selectedStudent: null
 
 	Component.onCompleted: {
-		HttpRequest.get("http://httpbin.org/get").timeout(5000).then(
-					function (res) {
-						console.log("Beginning logging request... ")
-						console.log(res.status)
-						console.log(JSON.stringify(res.header, null, 4))
-						console.log(JSON.stringify(res.body, null, 4))
-					}).catch(function (err) {
-						console.log(err.message)
-						console.log(err.response)
-					})
+		//Get students from SharePoint
+	}
+
+	onInitTheme: {
+		Theme.tabBar.showIcon = true
 	}
 
 	Navigation {
+		id: mainNavigationStack
 		navigationMode: navigationModeTabsAndDrawer
 		tabPosition: Qt.BottomEdge
 
+		Component.onCompleted: {
+			if (!isLoggedIn) {
+				mainNavigationStack.push(LoginPage)
+			}
+		}
+
 		NavigationItem {
+			//Student List page with navigation stack and search icon
 			title: qsTr("Student List")
 			icon: IconType.users
 			showInDrawer: false
@@ -38,43 +46,29 @@ App {
 				id: studentNavigationStack
 				splitView: tablet
 
-				Component.onCompleted: {
-					if (!isLoggedIn) {
-						studentNavigationStack.push(LoginPage)
-					}
-				}
-
 				StudentListView {
 					id: studentListPageId
-
-					rightBarItem: NavigationBarItem {
-						IconButton {
-							anchors.fill: parent
-							icon: IconType.search
-							color: Theme.platform === "ios" ? "blue" : "white"
-							selectedIcon: IconType.times
-							toggle: true
-							onToggled: showListSearch = !showListSearch
-						}
-					}
 				}
 			}
+			onSelected: onStepsPage = false
 		}
 		NavigationItem {
+			//Steps list page
 			title: qsTr("Steps")
 			icon: IconType.tasks
 			showInDrawer: false
 			NavigationStack {
 				StepsListView {}
 			}
+			onSelected: onStepsPage = true
 		}
-		//			NavigationItem {
-		//				title: qsTr("Login")
-		//				icon: IconType.globe
-		//				NavigationStack {
-		//					LoginPage {}
-		//				}
+		//		NavigationItem {
+		//			title: qsTr("Login")
+		//			icon: IconType.globe
+		//			NavigationStack {
+		//				LoginPage {}
 		//			}
+		//		}
 	}
 	Component {
 		id: studentDetailPageComponent
@@ -82,5 +76,10 @@ App {
 			id: studentDetailPageId
 			title: selectedStudentName
 		}
+	}
+
+	// Move json data into studentJsonData so it's attached to JsonListModel
+	function studentJsonDataFetched(jsonData) {
+		studentJsonData = jsonData
 	}
 }
