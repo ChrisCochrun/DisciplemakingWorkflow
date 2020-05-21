@@ -1,0 +1,28 @@
+#+TITLE: README
+* Intro
+  This app is an attempt at making discipleship with people easier by offloading the effort onto technology and less reliance on ourselves to learn and remember the many possible life teaching moments that help us all get to know Jesus better. It's best suited for youth ministers who want to help teenagers get to know Jesus, and would like an easy place to keep track of where students are in their walk with Christ.
+
+  The core of the process lies in the 4 Chair Discipleship method created by Dann Spader. https://4chairdiscipling.com 
+
+  This rendition of the process has been developed by Teens For Christ Connection for use within their youth ministry. You are more than welcome to use this for your own purposes. The app is developed by Chris Cochrun a staff member of TFC. mailto:chris@tfcconnection.org
+
+* Description
+  While the 4 chair language is embedded into the app, this language is not crucial to the process. The idea is that basically there are 4 stages of discipleship. They are broken up in the simplest way like this.
+
+- Chair 1 - The Lost - The people who don't know Christ
+- Chair 2 - The Children - The people who know Christ are still learning how to live LIKE Christ
+- Chair 3 - The Workers - Those who have been living like Christ for a while and are starting to help others do the same.
+- Chair 4 - The Apostles - Those who have been teaching others and now must multiply their efforts by helping others teach others.
+
+  In each stage there are areas of growth that are deemed more important than others. One of the easiest analogies to use is that in chair 2 people are to be constantly fed scripture and slowly help them to learn to walk like Christ and talk like Christ and understand the world through the lens of Christ. It's very alike a baby being spoon-fed until they can feed themselves, walk, talk and clean themselves.
+
+  This is where the core weight of the app comes into play with this process. The app takes a lot of the weight of remembering where people are in their walk and even what to do next with them. It helps you constantly think of where that person is in their journey with Christ and what next steps they may need to take. For example, a chair 2 teenager may not have a personal discipline of reading scripture everyday. So the app may ask you to start a reading plan with them and check in with them weekly until it becomes a habit of theirs.
+
+  Keeping track of where everyone in your life is in their walk with Christ is basically an impossible task. And this is not the intention of the app. We don't believe that technology can ever replace and hint from the Holy Spirit. You'll never really get it right, but it's a tool that may help you get on the right track and to think a little longer and harder about it as you pray for your friends, family, and parishioners.
+
+* Setup
+  The app is based off of a Microsoft SharePoint list. In fact it's built off many of them. That means that every student and action step exists in SharePoint so that it is synced across all devices using it. Obviously this backend is only accessible to the TFC staff and not to everyone who may happen along this app. As of right now, the core of the material used in the process is kept stored internally in those lists and if you'd like to get that information you'd have to contact me at mailto:chris@tfcconnection.org
+
+  Since the SP lists contain the data, it is required to have an internet connection when using the app for now. Without one you'll not get the latest info on the students and steps in the system. This will be worked on when possible.
+
+  
