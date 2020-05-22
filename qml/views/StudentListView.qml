@@ -21,7 +21,8 @@ Page {
 				studentListPageId.navigationStack.push(
 							studentDetailPageComponent)
 				selectedStudentName = FullName
-				selectedStudent = modelData
+				selectedStudent = model
+          console.log("clicked student: "+FullName)
 			}
 		}
 

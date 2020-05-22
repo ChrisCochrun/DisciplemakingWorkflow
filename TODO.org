@@ -2,3 +2,5 @@
 * Tasks
 ** TODO Get a working demo going
    - State "TODO"       from              [2020-05-19 Tue 14:38]
+** TODO Build a list for the steps to look good on all places
+   - State "TODO"       from              [2020-05-21 Thu 10:42]

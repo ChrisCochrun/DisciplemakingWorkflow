@@ -8,7 +8,7 @@ import "../models"
 
 Page {
 	id: studentDetailPage
-	title: selectedStudentName
+	title: selectedStudent.FullName
 
 	property bool identityFilter: true
 	property bool walkFilter: true
@@ -36,16 +36,16 @@ Page {
 		width: parent.width / 3
 		height: width
 		fillMode: Image.PreserveAspectCrop
-		source: "../../assets/frodo.jpg"
+		source: selectedStudent.Image
 		radius: width / 2
 	}
 
 	AppText {
 		id: studentChairLabel
 		anchors.top: studentImage.bottom
-		anchors.topMargin: dp(14)
+		anchors.topMargin: dp(12)
 		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: sp(12)
+		fontSize: sp(14)
 		text: qsTr("Chair " + selectedStudent.Chair)
 	}
 
@@ -78,7 +78,7 @@ Page {
 		text: qsTr("Filter: ")
 		font.bold: true
 		font.pointSize: sp(15)
-		anchors.verticalCenter: catComboBox.verticalCenter
+		anchors.verticalCenter: chairComboBox.verticalCenter
 		anchors.left: frame.left
 		anchors.leftMargin: dp(10)
 	}
@@ -87,17 +87,34 @@ Page {
 		id: chairComboBox
 		anchors.right: frame.right
 		anchors.rightMargin: dp(10)
-		anchors.top: catComboBox.top
+		anchors.top: chairProgressBarId.top
+      anchors.topMargin: dp(20)
 		height: width / 2
-		width: dp(80)
+		width: dp(90)
 		model: ["Chair 2", "Chair 1", "Chair 3"]
 		onCurrentTextChanged: selectedChair = currentText
 	}
 
+    Rectangle {
+        id: filterBox
+        anchors.top: parent.top
+        anchors.right: parent.right
+        width: dp(70)
+        height: dp(100)
+        color: black
+        
+
+        AppButton {
+            id: chairFilterButton
+            text: qsTr("Chair")
+            anchors.top: parent.top
+            anchors.left: parent.left
+        }
+    }
 	Frame {
 		id: frame
 		x: 8
-		anchors.top: catComboBox.bottom
+		anchors.top: chairComboBox.bottom
 		anchors.topMargin: 10
 		width: parent.width - 20
 		height: parent.height / 2
