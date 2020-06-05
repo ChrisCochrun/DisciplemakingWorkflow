@@ -18,11 +18,11 @@ Page {
 				spacing: 12
 			}
 			onSelected: {
-				studentListPageId.navigationStack.push(
+				studentListPageId.navigationStack.popAllExceptFirstAndPush(
 							studentDetailPageComponent)
 				selectedStudentName = FullName
 				selectedStudent = model
-          console.log("clicked student: "+FullName)
+				console.log("clicked student: " + FullName)
 			}
 		}
 

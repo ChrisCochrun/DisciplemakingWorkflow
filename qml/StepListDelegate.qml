@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.12
+import QtQuick 2.13
+import QtQuick.Controls 2.13
 import Felgo 3.0
 
 Item {
@@ -14,16 +14,16 @@ Item {
 		text: name
 		//		wrapMode: Text.WordWrap
 		elide: Text.ElideRight
-		  width: parent.width - 80
+		width: parent.width - dp(80)
 		anchors.top: parent.top
-		anchors.topMargin: 2
+		anchors.topMargin: dp(2)
 	}
 
 	Row {
 		id: stepCatRow
-		anchors.top: stepNameText.top
-		anchors.topMargin: 20
-		spacing: 5
+		anchors.top: stepNameText.bottom
+		anchors.topMargin: dp(10)
+		spacing: dp(3)
 		Text {
 			id: stepCatText
 			text: "Category: "
@@ -68,28 +68,30 @@ Item {
 
 	AppCheckBox {
 		anchors.right: stepDelegateItem.right
-		anchors.rightMargin: studentStepListView.x
+		anchors.rightMargin: studentStepListView.x + dp(20)
 		visible: !onStepsPage
 		id: checkStep
 		anchors.top: parent.top
-		anchors.topMargin: 7
+		anchors.topMargin: studentStepListView.spacing / dp(2)
+		checkBoxSize: Theme.isDesktop === true ? 50 : 80
+		iconSize: Theme.isDesktop === true ? 40 : 60
+
 		onCheckedChanged: timer.start()
-		checkBoxSize: Theme.isDesktop === true ? 30 : 50
-		iconSize: Theme.isDesktop === true ? 20 : 30
 	}
 
 	Timer {
 		id: timer
 		interval: 400
-		onTriggered: studentStepListView.model.remove(index)
+		onTriggered: console.log(
+						 name + " has been checked") //studentStepListView.model.remove(index)
 	}
 
 	Rectangle {
 		id: seperatorRect
 		anchors.top: stepCatRow.bottom
-		anchors.topMargin: 14
+		anchors.topMargin: studentStepListView.spacing / dp(2)
 		height: 1
-		width: parent.width
+		width: parent.width - checkStep.anchors.rightMargin
 		color: "lightgray"
 	}
 }

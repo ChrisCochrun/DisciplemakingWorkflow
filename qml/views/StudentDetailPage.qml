@@ -1,6 +1,6 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Controls.Material 2.12
+import QtQuick 2.13
+import QtQuick.Controls 2.13
+import QtQuick.Controls.Material 2.13
 import QtGraphicalEffects 1.0
 import Felgo 3.0
 import "../"
@@ -17,6 +17,8 @@ Page {
 	property bool cleanFilter: true
 	property var selectedChair: "Chair 2"
 
+	property bool filterBoxOpened: false
+
 	rightBarItem: NavigationBarItem {
 		IconButtonBarItem {
 			icon: IconType.filter
@@ -24,7 +26,7 @@ Page {
 			anchors.verticalCenter: parent.verticalCenter
 			anchors.rightMargin: dp(6)
 			color: Theme.platform === "ios" ? "blue" : "white"
-        onClicked: filterCategoriesDialog.open()
+			onClicked: filterCategoriesDialog.open()
 		}
 	}
 
@@ -36,7 +38,7 @@ Page {
 		width: parent.width / 3
 		height: width
 		fillMode: Image.PreserveAspectCrop
-		source: selectedStudent.Image
+		source: "../../assets/frodo.jpg" /* selectedStudent.Image */
 		radius: width / 2
 	}
 
@@ -45,7 +47,7 @@ Page {
 		anchors.top: studentImage.bottom
 		anchors.topMargin: dp(12)
 		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: sp(14)
+		fontSize: sp(12)
 		text: qsTr("Chair " + selectedStudent.Chair)
 	}
 
@@ -54,7 +56,7 @@ Page {
 		anchors.top: studentChairLabel.bottom
 		anchors.topMargin: 2
 		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: 12
+		fontSize: sp(6)
 		text: qsTr("This is only to be used as an estimate!")
 	}
 	AppText {
@@ -62,7 +64,7 @@ Page {
 		anchors.top: warningTextId.bottom
 		anchors.topMargin: 2
 		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: 12
+		fontSize: sp(6)
 		text: qsTr("70% to Chair " + (selectedStudent.Chair + 1))
 	}
 	ChairProgressBar {
@@ -73,49 +75,48 @@ Page {
 		width: parent.width / 2
 	}
 
-	AppText {
-		id: filterLabel
-		text: qsTr("Filter: ")
-		font.bold: true
-		font.pointSize: sp(15)
-		anchors.verticalCenter: chairComboBox.verticalCenter
-		anchors.left: frame.left
-		anchors.leftMargin: dp(10)
-	}
+	//	AppText {
+	//		id: filterLabel
+	//		text: qsTr("Filter: ")
+	//		font.bold: true
+	//		font.pointSize: sp(15)
+	//		anchors.verticalCenter: chairComboBox.verticalCenter
+	//		anchors.left: frame.left
+	//		anchors.leftMargin: dp(10)
+	//	}
 
-	ComboBox {
-		id: chairComboBox
-		anchors.right: frame.right
-		anchors.rightMargin: dp(10)
-		anchors.top: chairProgressBarId.top
-      anchors.topMargin: dp(20)
-		height: width / 2
-		width: dp(90)
-		model: ["Chair 2", "Chair 1", "Chair 3"]
-		onCurrentTextChanged: selectedChair = currentText
-	}
+	//	Rectangle {
+	//		id: filterBox
+	//		anchors.top: parent.top
+	//		anchors.right: parent.right
+	//		width: dp(150)
+	//		height: dp(100)
+	//		color: "#dddddd"
+	//		visible: filterBoxOpened
 
-    Rectangle {
-        id: filterBox
-        anchors.top: parent.top
-        anchors.right: parent.right
-        width: dp(70)
-        height: dp(100)
-        color: black
-        
+	//		AppButton {
+	//			id: chairFilterButton
+	//			text: qsTr("Chair")
+	//			anchors.top: parent.top
+	//			anchors.left: parent.left
+	//			width: parent.width
+	//		}
 
-        AppButton {
-            id: chairFilterButton
-            text: qsTr("Chair")
-            anchors.top: parent.top
-            anchors.left: parent.left
-        }
-    }
+	//		AppButton {
+	//			id: catFilterButton
+	//			text: qsTr("Category")
+	//			anchors.top: chairFilterButton.bottom
+	//			anchors.left: parent.left
+	//			width: parent.width
+
+	//			onClicked: filterCategoriesDialog.open()
+	//		}
+	//	}
 	Frame {
 		id: frame
 		x: 8
-		anchors.top: chairComboBox.bottom
-		anchors.topMargin: 10
+		anchors.top: chairProgressBarId.bottom
+		anchors.topMargin: dp(20)
 		width: parent.width - 20
 		height: parent.height / 2
 		hoverEnabled: true
@@ -124,14 +125,14 @@ Page {
 		AppListView {
 			id: studentStepListView
 			width: parent.width - 21
-			height: frame.availableHeight - y - 10
-			anchors.horizontalCenterOffset: 6
+			height: frame.availableHeight - y - dp(10)
+			anchors.horizontalCenterOffset: dp(16)
 			anchors.top: parent.top
-			anchors.topMargin: 10
-			spacing: 40
+			anchors.topMargin: dp(10)
+			spacing: height / 5
 			anchors.horizontalCenter: parent.horizontalCenter
 			currentIndex: 0
-			clip: true
+			clip: false
 
 			model: filteredStepModel
 			delegate: StepListDelegate {}
@@ -180,7 +181,7 @@ Page {
 		horizontalOffset: 3
 		verticalOffset: 3
 		samples: 6
-		radius: 9
+		radius: 11
 		color: "black"
 	}
 
@@ -206,7 +207,9 @@ Page {
 			id: nameLabel
 			x: 20
 			text: qsTr("Step Name")
-			font.pixelSize: 12
+			fontSize: sp(6)
+			anchors.top: parent.top
+			anchors.topMargin: dp(20)
 		}
 
 		AppTextField {
@@ -216,7 +219,7 @@ Page {
 			width: parent.width - 40
 			placeholderText: qsTr("New Step")
 			anchors.left: nameLabel.left
-			font.pixelSize: 12
+			font.pixelSize: sp(12)
 			hoverEnabled: true
 			selectByMouse: true
 		}
@@ -227,7 +230,7 @@ Page {
 			anchors.top: textEdit.bottom
 			anchors.topMargin: 20
 			text: qsTr("Chair")
-			font.pixelSize: 12
+			fontSize: sp(6)
 		}
 
 		ComboBox {
@@ -236,6 +239,7 @@ Page {
 			anchors.topMargin: 10
 			anchors.left: chairLabel.left
 			width: textEdit.width
+			height: dp(30)
 			model: ["Chair 1", "Chair 2", "Chair 3"]
 		}
 
@@ -296,7 +300,14 @@ Page {
 			anchors.topMargin: 20
 			anchors.left: chairLabel.left
 			text: qsTr("Category")
-			font.pixelSize: 12
+			fontSize: sp(6)
+		}
+
+		Item {
+			id: newStepDialogSpacer
+			anchors.top: cleanCheckBox.bottom
+			anchors.topMargin: dp(30)
+			height: dp(10)
 		}
 
 		onAccepted: {
@@ -333,13 +344,45 @@ Page {
 		negativeAction: false
 		onAccepted: close()
 
+		AppText {
+			id: filterChairLabel
+			anchors.top: filterButtonsRowId.bottom
+			anchors.topMargin: dp(10)
+			anchors.left: parent.left
+			anchors.leftMargin: dp(20)
+			text: qsTr("Chair Filter")
+			fontSize: sp(10)
+		}
+
+		AppText {
+			id: filterCatLabel
+			anchors.top: parent.top
+			anchors.topMargin: dp(10)
+			anchors.left: parent.left
+			anchors.leftMargin: dp(20)
+			text: qsTr("Category Filter")
+			fontSize: sp(10)
+		}
+
+		ComboBox {
+			id: chairComboBox
+			anchors.horizontalCenter: parent.horizontalCenter
+			anchors.top: filterChairLabel.bottom
+			anchors.topMargin: dp(10)
+			height: width / 2
+			width: dp(90)
+			model: ["Chair 2", "Chair 1", "Chair 3"]
+			onCurrentTextChanged: selectedChair = currentText
+		}
+
 		AppCheckBox {
 			id: identityFilterCheckBox
 			text: "Identity"
 			checked: identityFilter
 			onCheckedChanged: checked ? identityFilter = true : identityFilter = false
-			y: 20
-			x: 10
+			anchors.top: filterCatLabel.bottom
+			anchors.topMargin: dp(10)
+			x: dp(20)
 		}
 
 		AppCheckBox {
@@ -420,8 +463,8 @@ Page {
 		Item {
 			id: dialogSpacer
 			height: 30
-			anchors.top: filterButtonsRowId.bottom
-			anchors.topMargin: 2
+			anchors.top: chairComboBox.bottom
+			anchors.topMargin: dp(5)
 		}
 	}
 
