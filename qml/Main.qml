@@ -18,9 +18,6 @@ App {
 	property var studentJsonData: []
   property var selectedStudent: null
 
-	Component.onCompleted: {
-		//Get students from SharePoint
-	}
 
 	onInitTheme: {
 		Theme.tabBar.showIcon = true
