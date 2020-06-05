@@ -18,10 +18,7 @@ App {
 	property var studentJsonData: []
   property var selectedStudent: null
 
-	Component.onCompleted: {
-		//Get students from SharePoint
-	}
-
+    /* Ensure icons are used in tabbar */
 	onInitTheme: {
 		Theme.tabBar.showIcon = true
 	}
@@ -31,6 +28,7 @@ App {
 		navigationMode: navigationModeTabsAndDrawer
 		tabPosition: Qt.BottomEdge
 
+      /* check to see if logged in, if not open login page */
 		Component.onCompleted: {
 			if (!isLoggedIn) {
 				mainNavigationStack.push(LoginPage)
@@ -38,7 +36,7 @@ App {
 		}
 
 		NavigationItem {
-			//Student List page with navigation stack and search icon
+			//Student List page with navigation stack and search icon - App starts on this page for now
 			title: qsTr("Student List")
 			icon: IconType.users
 			showInDrawer: false
@@ -70,6 +68,7 @@ App {
 		//			}
 		//		}
 	}
+    /* Component that loads the detail of student when student is selected */
 	Component {
 		id: studentDetailPageComponent
 		StudentDetailPage {
