@@ -1,9 +1,24 @@
-import QtQuick 2.0
+import QtQuick 2.12
 import Felgo 3.0
 import "../models"
 
 Page {
 	title: qsTr("Students")
+
+	rightBarItem: NavigationBarItem {
+		IconButton {
+			anchors.right: parent.right
+			anchors.verticalCenter: parent.verticalCenter
+			anchors.rightMargin: dp(6)
+			icon: IconType.search
+			color: Theme.platform === "ios" ? "blue" : "white"
+			selectedIcon: IconType.times
+			toggle: true
+			onToggled: showListSearch = !showListSearch
+		}
+	}
+
+
 
 	AppListView {
 		id: studentAppListId

@@ -15,9 +15,17 @@ Page {
 	property bool talkFilter: true
 	property bool feedFilter: true
 	property bool cleanFilter: true
-	property var selectedChair: "Chair 2"
+    property int selectedChair: selectedStudent.Chair
 
 	property bool filterBoxOpened: false
+
+    Component.onCompleted: console.log(selectedChair)
+    function changeChair() {
+        selectedChair = null
+        console.log("chair changing to null...")
+	}
+
+    Component.onDestruction: changeChair()
 
 	rightBarItem: NavigationBarItem {
 		IconButtonBarItem {
@@ -113,7 +121,7 @@ Page {
 	//		}
 	//	}
 	Frame {
-		id: frame
+		id: stepsFrame
 		x: 8
 		anchors.top: chairProgressBarId.bottom
 		anchors.topMargin: dp(20)
@@ -125,7 +133,7 @@ Page {
 		AppListView {
 			id: studentStepListView
 			width: parent.width - 21
-			height: frame.availableHeight - y - dp(10)
+			height: stepsFrame.availableHeight - 10
 			anchors.horizontalCenterOffset: dp(16)
 			anchors.top: parent.top
 			anchors.topMargin: dp(10)
@@ -473,32 +481,33 @@ Page {
 		sourceModel: StepListModel {}
 		filters: [
 			RegExpFilter {
-				roleName: "chair"
+				roleName: "Chair"
 				pattern: selectedChair
+				enabled: true
 			},
 			AnyOf {
 				ValueFilter {
-					roleName: "identity"
+					roleName: "Identity"
 					value: true
 					enabled: identityFilter
 				}
 				ValueFilter {
-					roleName: "walk"
+					roleName: "Walk"
 					value: true
 					enabled: walkFilter
 				}
 				ValueFilter {
-					roleName: "talk"
+					roleName: "Talk"
 					value: true
 					enabled: talkFilter
 				}
 				ValueFilter {
-					roleName: "feed"
+					roleName: "Feed"
 					value: true
 					enabled: feedFilter
 				}
 				ValueFilter {
-					roleName: "clean"
+					roleName: "Clean"
 					value: true
 					enabled: cleanFilter
 				}

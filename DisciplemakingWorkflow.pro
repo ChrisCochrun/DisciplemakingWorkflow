@@ -114,6 +114,7 @@ DISTFILES += \
 	qml/models/StudentListModel.qml \
 	qml/StudentListView.qml \
 	qml/config.json \
+	qml/models/StudentStepListModel.qml \
 	win/app_icon.ico \
 	win/app_icon.rc
 

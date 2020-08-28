@@ -11,8 +11,7 @@ Item {
 
 	Text {
 		id: stepNameText
-		text: name
-		//		wrapMode: Text.WordWrap
+		text: Title
 		elide: Text.ElideRight
 		width: parent.width - dp(80)
 		anchors.top: parent.top
@@ -27,43 +26,43 @@ Item {
 		Text {
 			id: stepCatText
 			text: "Category: "
-			font.bold: true
+            font.bold: true
 			anchors.top: parent.top
 		}
-		//		Repeater {
-		//			model: category
-		//			anchors.verticalCenter: stepCatText.verticalCenter
-		//			Text {
-		//				id: catNameText
-		//				text: name
-		//			}
-		//			visible: false
-		//		}
 		Text {
 			id: identityDelText
 			text: qsTr("Identity")
-			visible: identity
+			visible: Identity
 		}
 		Text {
 			id: walkDelText
 			text: qsTr("Walk")
-			visible: walk
+			visible: Walk
 		}
 		Text {
 			id: talkDelText
 			text: qsTr("Talk")
-			visible: talk
+			visible: Talk
 		}
 		Text {
 			id: feedDelText
 			text: qsTr("Feed")
-			visible: feed
+			visible: Feed
 		}
 		Text {
 			id: cleanDelText
 			text: qsTr("Clean")
-			visible: clean
+			visible: Clean
 		}
+	}
+
+	Text {
+		id: chairText
+		text: Chair.value
+		elide: Text.ElideRight
+		width: parent.width - dp(80)
+		anchors.top: stepCatRow.bottom
+		anchors.topMargin: dp(2)
 	}
 
 	AppCheckBox {
@@ -73,8 +72,8 @@ Item {
 		id: checkStep
 		anchors.top: parent.top
 		anchors.topMargin: studentStepListView.spacing / dp(2)
-		checkBoxSize: Theme.isDesktop === true ? 50 : 80
-		iconSize: Theme.isDesktop === true ? 40 : 60
+		checkBoxSize: Theme.isDesktop === true ? dp(30) : dp(30)
+		iconSize: Theme.isDesktop === true ? dp(20) : dp(20)
 
 		onCheckedChanged: timer.start()
 	}
@@ -83,7 +82,7 @@ Item {
 		id: timer
 		interval: 400
 		onTriggered: console.log(
-						 name + " has been checked") //studentStepListView.model.remove(index)
+						 Title + " has been toggled") //studentStepListView.model.remove(index)
 	}
 
 	Rectangle {

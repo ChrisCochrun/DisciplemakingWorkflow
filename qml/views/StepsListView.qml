@@ -4,6 +4,8 @@ import Felgo 3.0
 import "../models"
 
 Page {
+	property var showStepListSearch: false
+
 	title: qsTr("Steps")
 
 	rightBarItem: NavigationBarItem {
@@ -15,22 +17,54 @@ Page {
 			color: Theme.platform === "ios" ? "blue" : "white"
 			selectedIcon: IconType.times
 			toggle: true
-			onToggled: showListSearch = !showListSearch
+			onToggled: showStepListSearch = !showStepListSearch
 		}
 	}
 
-	ListView {
+	SearchBar {
+		id: stepSearchBar
+		visible: showStepListSearch
+	}
+
+	AppListView {
 		id: stepsList
 		height: parent.height
 		width: parent.width
 
-		model: StepListModel {}
+		model: stepSortFilterProxyListModel
 		delegate: SimpleRow {
 			id: studentSimpleRow
-			text: name
-			detailText: chair
+			text: Title
+			detailText: Chair.Value
 			style: StyleSimpleRow {
 				spacing: 12
+			}
+		}
+		anchors.top: showStepListSearch ? stepSearchBar.bottom : parent.top
+	}
+	SortFilterProxyModel {
+		id: stepSortFilterProxyListModel
+		sourceModel: StepListModel {}
+
+		sorters: StringSorter {
+			roleName: "Chair"
+			enabled: true
+		}
+
+		filters: AnyOf {
+			RegExpFilter {
+				id: studentFirstNameFilterId
+				roleName: "Title"
+				pattern: stepSearchBar.text
+				enabled: true
+				caseSensitivity: "CaseInsensitive"
+			}
+			RegExpFilter {
+				id: studentLastNameFilterId
+				roleName: "Chair"
+				pattern: stepSearchBar.text
+				enabled: true
+				caseSensitivity: "CaseInsensitive"
 			}
 		}
 	}

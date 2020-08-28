@@ -26,4 +26,6 @@ The app is based off of a Microsoft SharePoint list. In fact it's built off many
 Since the SP lists contain the data, it is required to have an internet connection when using the app for now. Without one you'll not get the latest info on the students and steps in the system. This will be worked on when possible.
 
 * Usage
-It's best to use the app by selecting just a few students you'd really like to focus on. Once you've selected those students, it's best to do your absolute best to keep the app updated with what you've done with that student. Once you do one thing, mark it, let the app do the job of presenting the best options for you next and keep marking things off as it goes on.
+It's best to use the app by selecting just a few students you'd really like to focus on. Once you've selected those students, it's best to do your absolute best to keep the app updated with what you've done with those students. Once you do one thing, mark it, let the app do the job of presenting the best options for you next and keep marking things off as it goes on.
+
+Obviously, it is possible to circumvent the automatic suggestions, you know your students best. Feel free to select and focus on particular steps rather than just the suggested ones.
