@@ -1,4 +1,4 @@
-import QtQuick 2.12
+import QtQuick 2.13
 import Felgo 3.0
 import "../models"
 
@@ -33,10 +33,13 @@ Page {
 				spacing: 12
 			}
 			onSelected: {
-				studentListPageId.navigationStack.popAllExceptFirstAndPush(
+				// Making sure variables are properly set so that the detail
+				// page gets the right info for each student.
+                selectedStudentName = FullName
+                selectedStudent = model
+                selectedChair = Chair
+                studentListPageId.navigationStack.popAllExceptFirstAndPush(
 							studentDetailPageComponent)
-				selectedStudentName = FullName
-				selectedStudent = model
 				console.log("clicked student: " + FullName)
 			}
 		}

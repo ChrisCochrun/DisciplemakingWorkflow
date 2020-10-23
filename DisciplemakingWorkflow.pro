@@ -7,7 +7,7 @@ CONFIG += felgo
 
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
-PRODUCT_IDENTIFIER = com.yourcompany.wizardEVAP.DisciplemakingWorkflow
+PRODUCT_IDENTIFIER = com.tfcconnection.DisciplemakingWorkflow
 PRODUCT_VERSION_NAME = 1.0.0
 PRODUCT_VERSION_CODE = 1
 
@@ -26,8 +26,6 @@ DEPLOYMENTFOLDERS += assetsFolder
 # Add more folders to ship with the application here
 
 RESOURCES += \ #    resources.qrc # uncomment for publishing
-    resources.qrc \
-    resources.qrc
 
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the DEPLOYMENTFOLDERS += qmlFolder line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)
@@ -115,6 +113,8 @@ DISTFILES += \
 	qml/StudentListView.qml \
 	qml/config.json \
 	qml/models/StudentStepListModel.qml \
+	qml/utils/Api.qml \
+	qml/views/StepDetailPage.qml \
 	win/app_icon.ico \
 	win/app_icon.rc
 

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.13
 import QtQuick.Controls 2.12
 import Felgo 3.0
 import "../models"
@@ -39,8 +39,19 @@ Page {
 			style: StyleSimpleRow {
 				spacing: 12
 			}
+            onSelected: {
+                // Making sure variables are properly set so that the detail
+                // page gets the right info for step.
+                stepListPageId.navigationStack.popAllExceptFirstAndPush(
+                            stepDetailPageComponent)
+                selectedStepTitle = Title
+                selectedStep = model
+                console.log("clicked step: " + Title)
+            }
+
 		}
 		anchors.top: showStepListSearch ? stepSearchBar.bottom : parent.top
+
 	}
 	SortFilterProxyModel {
 		id: stepSortFilterProxyListModel

@@ -4,8 +4,28 @@
 ** DONE Move Chair Combo Box to Filter Drop-down
 ** STRT Get a working demo going
    - State "TODO"       from              [2020-05-19 Tue 14:38]
+*** TODO Add action steps functionality
+- [-] List the steps that are relevant to that student.
+  + Halfway there. I've got the steps to show the relevant chair that the student is in, but I need to instead get the steps to be based off the ones that the student has DONE.
+  + I've got them into the app, but now need to filter steps off that new model
+  + Got them filtered but they stopped showing up
+
+- [ ] Add and remove steps based off checking them off
+
+- [ ] See the steps that are finished as well.
+*** STRT Create a StepDetailPage
+- [X] Create a basic page
+- [ ] Create a basic looking detail view of each step
+- [ ] Make it look nice
+- [ ] Give the ability to add steps from the list page and jump straight into the detail page
+*** STRT Link students and steps
+- [X] Make sharepoint links
+- [X] Add functionality to get those linked models into the app without crushing it
+- [X] Filter the steps by the ones in that other model
+- [ ] Get them to show
+
+** STRT Fix the StepDelegate list on Student Detail page
 ** STRT Build a list for the steps to look good on all places
    - State "TODO"       from              [2020-05-21 Thu 10:42]
-** STRT Fix the StepDelegate list on Student Detail page
-** TODO Create a StepDetailPage
-** TODO Link students and steps
+** TODO Create animations
+[[nov:/home/chris/storage/Nextcloud/books/qt5_cadaques.epub::7:17722][EPUB file at /home/chris/storage/Nextcloud/books/qt5_cadaques.epub]]

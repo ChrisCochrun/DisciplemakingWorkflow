@@ -5,520 +5,477 @@ import QtGraphicalEffects 1.0
 import Felgo 3.0
 import "../"
 import "../models"
+import "../utils"
 
 Page {
-	id: studentDetailPage
-	title: selectedStudent.FullName
+    id: studentDetailPage
+    title: selectedStudent.FullName + " ID: " + selectedStudent.ID
 
-	property bool identityFilter: true
-	property bool walkFilter: true
-	property bool talkFilter: true
-	property bool feedFilter: true
-	property bool cleanFilter: true
-    property int selectedChair: selectedStudent.Chair
+    property bool identityFilter: true
+    property bool walkFilter: true
+    property bool talkFilter: true
+    property bool feedFilter: true
+    property bool cleanFilter: true
+    property bool filterBoxOpened: false
 
-	property bool filterBoxOpened: false
+    Component.onCompleted: {
+        Api.getStudentStepData()
+    }
 
-    Component.onCompleted: console.log(selectedChair)
-    function changeChair() {
-        selectedChair = null
-        console.log("chair changing to null...")
-	}
+    rightBarItem: NavigationBarItem {
+        IconButtonBarItem {
+            icon: IconType.filter
+            anchors.right: parent.right
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.rightMargin: dp(6)
+            color: Theme.platform === "ios" ? "blue" : "white"
+            onClicked: filterCategoriesDialog.open()
+        }
+    }
 
-    Component.onDestruction: changeChair()
+    RoundedImage {
+        id: studentImage
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        anchors.topMargin: dp(10)
+        width: parent.width / 3
+        height: width
+        fillMode: Image.PreserveAspectCrop
+        source: "../../assets/frodo.jpg" /* selectedStudent.Image */
+        radius: width / 2
+    }
 
-	rightBarItem: NavigationBarItem {
-		IconButtonBarItem {
-			icon: IconType.filter
-			anchors.right: parent.right
-			anchors.verticalCenter: parent.verticalCenter
-			anchors.rightMargin: dp(6)
-			color: Theme.platform === "ios" ? "blue" : "white"
-			onClicked: filterCategoriesDialog.open()
-		}
-	}
+    AppText {
+        id: studentChairLabel
+        anchors.top: studentImage.bottom
+        anchors.topMargin: dp(12)
+        anchors.horizontalCenter: parent.horizontalCenter
+        fontSize: sp(12)
+        text: qsTr("Chair " + selectedChair)
+    }
+    AppText {
+        id: warningTextId
+        anchors.top: studentChairLabel.bottom
+        anchors.topMargin: 2
+        anchors.horizontalCenter: parent.horizontalCenter
+        fontSize: sp(6)
+        text: qsTr("This is only to be used as an estimate!")
+    }
+    AppText {
+        id: studentChairProgress
+        anchors.top: warningTextId.bottom
+        anchors.topMargin: 2
+        anchors.horizontalCenter: parent.horizontalCenter
+        fontSize: sp(6)
+        text: qsTr("70% to Chair " + (selectedStudent.Chair + 1))
+    }
+    ChairProgressBar {
+        id: chairProgressBarId
+        anchors.top: studentChairProgress.bottom
+        anchors.topMargin: 5
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width / 2
+    }
 
-	RoundedImage {
-		id: studentImage
-		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: parent.top
-		anchors.topMargin: dp(10)
-		width: parent.width / 3
-		height: width
-		fillMode: Image.PreserveAspectCrop
-		source: "../../assets/frodo.jpg" /* selectedStudent.Image */
-		radius: width / 2
-	}
+    Frame {
+        id: stepsFrame
+        x: 8
+        anchors.top: chairProgressBarId.bottom
+        anchors.topMargin: dp(20)
+        width: parent.width - 20
+        height: parent.height / 1.5
+        hoverEnabled: true
+        focusPolicy: Qt.StrongFocus
 
-	AppText {
-		id: studentChairLabel
-		anchors.top: studentImage.bottom
-		anchors.topMargin: dp(12)
-		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: sp(12)
-		text: qsTr("Chair " + selectedStudent.Chair)
-	}
+        background: Rectangle {
+                 color: "transparent"
+                 border.color: "red"//ThemeColors.dividerColor TODO need to add a real theme.
+                 radius: 2
+        }
+        AppListView {
+            id: studentStepListView
+            width: parent.width - 21
+            height: stepsFrame.availableHeight - 60
+            anchors.horizontalCenterOffset: dp(16)
+            anchors.top: parent.top
+            anchors.topMargin: dp(10)
+            spacing: height / 9
+            anchors.horizontalCenter: parent.horizontalCenter
+            currentIndex: 0
+            clip: false
 
-	AppText {
-		id: warningTextId
-		anchors.top: studentChairLabel.bottom
-		anchors.topMargin: 2
-		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: sp(6)
-		text: qsTr("This is only to be used as an estimate!")
-	}
-	AppText {
-		id: studentChairProgress
-		anchors.top: warningTextId.bottom
-		anchors.topMargin: 2
-		anchors.horizontalCenter: parent.horizontalCenter
-		fontSize: sp(6)
-		text: qsTr("70% to Chair " + (selectedStudent.Chair + 1))
-	}
-	ChairProgressBar {
-		id: chairProgressBarId
-		anchors.top: studentChairProgress.bottom
-		anchors.topMargin: 5
-		anchors.horizontalCenter: parent.horizontalCenter
-		width: parent.width / 2
-	}
+            model: filteredStudentStepModel
+            delegate: StepListDelegate {}
+        }
+    }
 
-	//	AppText {
-	//		id: filterLabel
-	//		text: qsTr("Filter: ")
-	//		font.bold: true
-	//		font.pointSize: sp(15)
-	//		anchors.verticalCenter: chairComboBox.verticalCenter
-	//		anchors.left: frame.left
-	//		anchors.leftMargin: dp(10)
-	//	}
+    RoundButton {
+        property alias cursorShape: mouseArea.cursorShape
 
-	//	Rectangle {
-	//		id: filterBox
-	//		anchors.top: parent.top
-	//		anchors.right: parent.right
-	//		width: dp(150)
-	//		height: dp(100)
-	//		color: "#dddddd"
-	//		visible: filterBoxOpened
+        id: floatingButtonId
+        icon.source: IconType.plus
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.rightMargin: dp(20)
+        anchors.bottomMargin: dp(20)
+        Icon {
+            icon: IconType.plus
+            anchors.centerIn: parent
+            color: "white"
+            size: dp(24)
+        }
+        background: Rectangle {
+            implicitHeight: parent.implicitHeight
+            implicitWidth: parent.implicitWidth
+            radius: parent.radius
+            color: floatingButtonId.pressed ? "#17598E" : "#1C77C3"
+        }
 
-	//		AppButton {
-	//			id: chairFilterButton
-	//			text: qsTr("Chair")
-	//			anchors.top: parent.top
-	//			anchors.left: parent.left
-	//			width: parent.width
-	//		}
+        width: dp(50)
+        height: width
 
-	//		AppButton {
-	//			id: catFilterButton
-	//			text: qsTr("Category")
-	//			anchors.top: chairFilterButton.bottom
-	//			anchors.left: parent.left
-	//			width: parent.width
+        hoverEnabled: true
+        MouseArea {
+            id: mouseArea
+            anchors.fill: parent
+            onPressed: mouse.accepted = false
+            cursorShape: "PointingHandCursor"
+        }
 
-	//			onClicked: filterCategoriesDialog.open()
-	//		}
-	//	}
-	Frame {
-		id: stepsFrame
-		x: 8
-		anchors.top: chairProgressBarId.bottom
-		anchors.topMargin: dp(20)
-		width: parent.width - 20
-		height: parent.height / 2
-		hoverEnabled: true
-		focusPolicy: Qt.StrongFocus
+        //onClicked: newStepDialog.open()
+        onClicked: console.log("chair is " + selectedChair)
+    }
 
-		AppListView {
-			id: studentStepListView
-			width: parent.width - 21
-			height: stepsFrame.availableHeight - 10
-			anchors.horizontalCenterOffset: dp(16)
-			anchors.top: parent.top
-			anchors.topMargin: dp(10)
-			spacing: height / 5
-			anchors.horizontalCenter: parent.horizontalCenter
-			currentIndex: 0
-			clip: false
+    DropShadow {
+        source: floatingButtonId
+        anchors.fill: floatingButtonId
+        horizontalOffset: 3
+        verticalOffset: 3
+        samples: 6
+        radius: 11
+        color: "black"
+    }
 
-			model: filteredStepModel
-			delegate: StepListDelegate {}
-		}
-	}
+    Dialog {
+        id: newStepDialog
+        title: "New Step"
+        anchors.centerIn: parent
+        //		height: parent.height - 150
+        //		width: parent.width - 100
+        positiveActionLabel: "Save"
+        negativeActionLabel: "Cancel"
+        autoSize: true
 
-	RoundButton {
-		property alias cursorShape: mouseArea.cursorShape
+        AppText {
+            id: nameLabel
+            x: 20
+            text: qsTr("Step Name")
+            fontSize: sp(6)
+            anchors.top: parent.top
+            anchors.topMargin: dp(20)
+        }
 
-		id: floatingButtonId
-		icon.source: IconType.plus
-		anchors.bottom: parent.bottom
-		anchors.right: parent.right
-		anchors.rightMargin: dp(20)
-		anchors.bottomMargin: dp(20)
-		Icon {
-			icon: IconType.plus
-			anchors.centerIn: parent
-			color: "white"
-			size: dp(24)
-		}
-		background: Rectangle {
-			implicitHeight: parent.implicitHeight
-			implicitWidth: parent.implicitWidth
-			radius: parent.radius
-			color: floatingButtonId.pressed ? "#17598E" : "#1C77C3"
-		}
+        AppTextField {
+            id: textEdit
+            anchors.top: nameLabel.bottom
+            anchors.topMargin: 10
+            width: parent.width - 40
+            placeholderText: qsTr("New Step")
+            anchors.left: nameLabel.left
+            font.pixelSize: sp(12)
+            hoverEnabled: true
+            selectByMouse: true
+        }
 
-		width: dp(50)
-		height: width
+        AppText {
+            id: chairLabel
+            anchors.left: textEdit.left
+            anchors.top: textEdit.bottom
+            anchors.topMargin: 20
+            text: qsTr("Chair")
+            fontSize: sp(6)
+        }
 
-		hoverEnabled: true
-		MouseArea {
-			id: mouseArea
-			anchors.fill: parent
-			onPressed: mouse.accepted = false
-			cursorShape: "PointingHandCursor"
-		}
+        ComboBox {
+            id: chairComboBoxId
+            anchors.top: chairLabel.bottom
+            anchors.topMargin: 10
+            anchors.left: chairLabel.left
+            width: textEdit.width
+            height: dp(30)
+            model: ["Chair 1", "Chair 2", "Chair 3"]
+        }
 
-		onClicked: newStepDialog.open()
-	}
+        AppCheckBox {
+            id: identityCheckBox
+            anchors {
+                top: categoryLabel.bottom
+                topMargin: 10
+                left: categoryLabel.left
+            }
+            width: chairComboBoxId.width
+            text: "identity"
+        }
 
-	DropShadow {
-		source: floatingButtonId
-		anchors.fill: floatingButtonId
-		horizontalOffset: 3
-		verticalOffset: 3
-		samples: 6
-		radius: 11
-		color: "black"
-	}
+        AppCheckBox {
+            id: walkCheckBox
+            anchors {
+                top: identityCheckBox.bottom
+                topMargin: 10
+                left: categoryLabel.left
+            }
+            width: chairComboBoxId.width
+            text: "walk"
+        }
+        AppCheckBox {
+            id: talkCheckBox
+            anchors {
+                top: walkCheckBox.bottom
+                topMargin: 10
+                left: categoryLabel.left
+            }
+            width: chairComboBoxId.width
+            text: "talk"
+        }
+        AppCheckBox {
+            id: feedCheckBox
+            anchors {
+                top: talkCheckBox.bottom
+                topMargin: 10
+                left: categoryLabel.left
+            }
+            width: chairComboBoxId.width
+            text: "feed"
+        }
+        AppCheckBox {
+            id: cleanCheckBox
+            anchors {
+                top: feedCheckBox.bottom
+                topMargin: 10
+                left: categoryLabel.left
+            }
+            width: chairComboBoxId.width
+            text: "clean"
+        }
+        AppText {
+            id: categoryLabel
+            anchors.top: chairComboBoxId.bottom
+            anchors.topMargin: 20
+            anchors.left: chairLabel.left
+            text: qsTr("Category")
+            fontSize: sp(6)
+        }
 
-	FloatingActionButton {
-		id: facButtonId
-		icon: IconType.plus
-		visible: false //Theme.isDesktop ? false : true
+        Item {
+            id: newStepDialogSpacer
+            anchors.top: cleanCheckBox.bottom
+            anchors.topMargin: dp(30)
+            height: dp(10)
+        }
 
-		onClicked: newStepDialog.open()
-	}
+        onAccepted: {
+            StepListModel.append({
+                                     "name": textEdit.text,
+                                     "chair": chairComboBoxId.currentText,
+                                     "identity": identityCheckBox.checked,
+                                     "walk": walkCheckBox.checked,
+                                     "talk": talkCheckBox.checked,
+                                     "feed": feedCheckBox.checked,
+                                     "clean": cleanCheckBox.checked
+                                 })
 
-	Dialog {
-		id: newStepDialog
-		title: "New Step"
-		anchors.centerIn: parent
-		//		height: parent.height - 150
-		//		width: parent.width - 100
-		positiveActionLabel: "Save"
-		negativeActionLabel: "Cancel"
-		autoSize: true
+            textEdit.clear()
+            chairComboBoxId.currentIndex = 0
+            if (identityCheckBox.checked)
+                identityCheckBox.toggle()
+            if (walkCheckBox.checked)
+                walkCheckBox.toggle()
+            if (talkCheckBox.checked)
+                talkCheckBox.toggle()
+            if (feedCheckBox.checked)
+                feedCheckBox.toggle()
+            if (cleanCheckBox.checked)
+                cleanCheckBox.toggle()
+            close()
+        }
+        onCanceled: close()
+    }
 
-		AppText {
-			id: nameLabel
-			x: 20
-			text: qsTr("Step Name")
-			fontSize: sp(6)
-			anchors.top: parent.top
-			anchors.topMargin: dp(20)
-		}
+    Dialog {
+        id: filterCategoriesDialog
+        autoSize: true
+        negativeAction: false
+        onAccepted: close()
 
-		AppTextField {
-			id: textEdit
-			anchors.top: nameLabel.bottom
-			anchors.topMargin: 10
-			width: parent.width - 40
-			placeholderText: qsTr("New Step")
-			anchors.left: nameLabel.left
-			font.pixelSize: sp(12)
-			hoverEnabled: true
-			selectByMouse: true
-		}
+        AppText {
+            id: filterChairLabel
+            anchors.top: filterButtonsRowId.bottom
+            anchors.topMargin: dp(10)
+            anchors.left: parent.left
+            anchors.leftMargin: dp(20)
+            text: qsTr("Chair Filter")
+            fontSize: sp(10)
+        }
 
-		AppText {
-			id: chairLabel
-			anchors.left: textEdit.left
-			anchors.top: textEdit.bottom
-			anchors.topMargin: 20
-			text: qsTr("Chair")
-			fontSize: sp(6)
-		}
+        AppText {
+            id: filterCatLabel
+            anchors.top: parent.top
+            anchors.topMargin: dp(10)
+            anchors.left: parent.left
+            anchors.leftMargin: dp(20)
+            text: qsTr("Category Filter")
+            fontSize: sp(10)
+        }
 
-		ComboBox {
-			id: chairComboBoxId
-			anchors.top: chairLabel.bottom
-			anchors.topMargin: 10
-			anchors.left: chairLabel.left
-			width: textEdit.width
-			height: dp(30)
-			model: ["Chair 1", "Chair 2", "Chair 3"]
-		}
+        ComboBox {
+            id: chairComboBox
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: filterChairLabel.bottom
+            anchors.topMargin: dp(10)
+            height: width / 2
+            width: dp(90)
+            displayText: "Chair " + currentText
+            model: ["1", "2", "3", "4"]
 
-		AppCheckBox {
-			id: identityCheckBox
-			anchors {
-				top: categoryLabel.bottom
-				topMargin: 10
-				left: categoryLabel.left
-			}
-			width: chairComboBoxId.width
-			text: "identity"
-		}
+            onActivated: selectedChair = currentIndex + 1
+        }
 
-		AppCheckBox {
-			id: walkCheckBox
-			anchors {
-				top: identityCheckBox.bottom
-				topMargin: 10
-				left: categoryLabel.left
-			}
-			width: chairComboBoxId.width
-			text: "walk"
-		}
-		AppCheckBox {
-			id: talkCheckBox
-			anchors {
-				top: walkCheckBox.bottom
-				topMargin: 10
-				left: categoryLabel.left
-			}
-			width: chairComboBoxId.width
-			text: "talk"
-		}
-		AppCheckBox {
-			id: feedCheckBox
-			anchors {
-				top: talkCheckBox.bottom
-				topMargin: 10
-				left: categoryLabel.left
-			}
-			width: chairComboBoxId.width
-			text: "feed"
-		}
-		AppCheckBox {
-			id: cleanCheckBox
-			anchors {
-				top: feedCheckBox.bottom
-				topMargin: 10
-				left: categoryLabel.left
-			}
-			width: chairComboBoxId.width
-			text: "clean"
-		}
-		AppText {
-			id: categoryLabel
-			anchors.top: chairComboBoxId.bottom
-			anchors.topMargin: 20
-			anchors.left: chairLabel.left
-			text: qsTr("Category")
-			fontSize: sp(6)
-		}
+        AppCheckBox {
+            id: identityFilterCheckBox
+            text: "Identity"
+            checked: identityFilter
+            onCheckedChanged: checked ? identityFilter = true : identityFilter = false
+            anchors.top: filterCatLabel.bottom
+            anchors.topMargin: dp(10)
+            x: dp(20)
+        }
 
-		Item {
-			id: newStepDialogSpacer
-			anchors.top: cleanCheckBox.bottom
-			anchors.topMargin: dp(30)
-			height: dp(10)
-		}
+        AppCheckBox {
+            id: walkFilterCheckBox
+            text: "Walk"
+            checked: walkFilter
+            onCheckedChanged: checked ? walkFilter = true : walkFilter = false
+            anchors.top: identityFilterCheckBox.bottom
+            anchors.topMargin: 20
+            anchors.left: identityFilterCheckBox.left
+        }
 
-		onAccepted: {
-			StepListModel.append({
-									 "name": textEdit.text,
-									 "chair": chairComboBoxId.currentText,
-									 "identity": identityCheckBox.checked,
-									 "walk": walkCheckBox.checked,
-									 "talk": talkCheckBox.checked,
-									 "feed": feedCheckBox.checked,
-									 "clean": cleanCheckBox.checked
-								 })
+        AppCheckBox {
+            id: talkFilterCheckBox
+            text: "Talk"
+            checked: talkFilter
+            onCheckedChanged: checked ? talkFilter = true : talkFilter = false
+            anchors {
+                top: walkFilterCheckBox.bottom
+                topMargin: 20
+                left: walkFilterCheckBox.left
+            }
+        }
 
-			textEdit.clear()
-			chairComboBoxId.currentIndex = 0
-			if (identityCheckBox.checked)
-				identityCheckBox.toggle()
-			if (walkCheckBox.checked)
-				walkCheckBox.toggle()
-			if (talkCheckBox.checked)
-				talkCheckBox.toggle()
-			if (feedCheckBox.checked)
-				feedCheckBox.toggle()
-			if (cleanCheckBox.checked)
-				cleanCheckBox.toggle()
-			close()
-		}
-		onCanceled: close()
-	}
+        AppCheckBox {
+            id: feedFilterCheckBox
+            text: "Feed"
+            checked: feedFilter
+            onCheckedChanged: checked ? feedFilter = true : feedFilter = false
+            anchors {
+                top: talkFilterCheckBox.bottom
+                topMargin: 20
+                left: walkFilterCheckBox.left
+            }
+        }
 
-	Dialog {
-		id: filterCategoriesDialog
-		autoSize: true
-		negativeAction: false
-		onAccepted: close()
+        AppCheckBox {
+            id: cleanFilterCheckBox
+            text: "Clean"
+            checked: cleanFilter
+            onCheckedChanged: checked ? cleanFilter = true : cleanFilter = false
+            anchors {
+                top: feedFilterCheckBox.bottom
+                topMargin: 20
+                left: walkFilterCheckBox.left
+            }
+        }
 
-		AppText {
-			id: filterChairLabel
-			anchors.top: filterButtonsRowId.bottom
-			anchors.topMargin: dp(10)
-			anchors.left: parent.left
-			anchors.leftMargin: dp(20)
-			text: qsTr("Chair Filter")
-			fontSize: sp(10)
-		}
+        Row {
+            id: filterButtonsRowId
+            anchors.top: cleanFilterCheckBox.bottom
+            anchors.topMargin: 30
+            anchors.horizontalCenter: parent.horizontalCenter
+            AppButton {
+                id: clearFiltersButtonId
+                text: "Clear All"
+                onClicked: {
+                    identityFilterCheckBox.checked = false
+                    walkFilterCheckBox.checked = false
+                    talkFilterCheckBox.checked = false
+                    feedFilterCheckBox.checked = false
+                    cleanFilterCheckBox.checked = false
+                }
+            }
+            AppButton {
+                id: markAllFiltersButtonId
+                text: "Check All"
+                onClicked: {
+                    identityFilterCheckBox.checked = true
+                    walkFilterCheckBox.checked = true
+                    talkFilterCheckBox.checked = true
+                    feedFilterCheckBox.checked = true
+                    cleanFilterCheckBox.checked = true
+                }
+            }
+        }
 
-		AppText {
-			id: filterCatLabel
-			anchors.top: parent.top
-			anchors.topMargin: dp(10)
-			anchors.left: parent.left
-			anchors.leftMargin: dp(20)
-			text: qsTr("Category Filter")
-			fontSize: sp(10)
-		}
+        Item {
+            id: dialogSpacer
+            height: 30
+            anchors.top: chairComboBox.bottom
+            anchors.topMargin: dp(5)
+        }
+    }
 
-		ComboBox {
-			id: chairComboBox
-			anchors.horizontalCenter: parent.horizontalCenter
-			anchors.top: filterChairLabel.bottom
-			anchors.topMargin: dp(10)
-			height: width / 2
-			width: dp(90)
-			model: ["Chair 2", "Chair 1", "Chair 3"]
-			onCurrentTextChanged: selectedChair = currentText
-		}
-
-		AppCheckBox {
-			id: identityFilterCheckBox
-			text: "Identity"
-			checked: identityFilter
-			onCheckedChanged: checked ? identityFilter = true : identityFilter = false
-			anchors.top: filterCatLabel.bottom
-			anchors.topMargin: dp(10)
-			x: dp(20)
-		}
-
-		AppCheckBox {
-			id: walkFilterCheckBox
-			text: "Walk"
-			checked: walkFilter
-			onCheckedChanged: checked ? walkFilter = true : walkFilter = false
-			anchors.top: identityFilterCheckBox.bottom
-			anchors.topMargin: 20
-			anchors.left: identityFilterCheckBox.left
-		}
-
-		AppCheckBox {
-			id: talkFilterCheckBox
-			text: "Talk"
-			checked: talkFilter
-			onCheckedChanged: checked ? talkFilter = true : talkFilter = false
-			anchors {
-				top: walkFilterCheckBox.bottom
-				topMargin: 20
-				left: walkFilterCheckBox.left
-			}
-		}
-
-		AppCheckBox {
-			id: feedFilterCheckBox
-			text: "Feed"
-			checked: feedFilter
-			onCheckedChanged: checked ? feedFilter = true : feedFilter = false
-			anchors {
-				top: talkFilterCheckBox.bottom
-				topMargin: 20
-				left: walkFilterCheckBox.left
-			}
-		}
-
-		AppCheckBox {
-			id: cleanFilterCheckBox
-			text: "Clean"
-			checked: cleanFilter
-			onCheckedChanged: checked ? cleanFilter = true : cleanFilter = false
-			anchors {
-				top: feedFilterCheckBox.bottom
-				topMargin: 20
-				left: walkFilterCheckBox.left
-			}
-		}
-
-		Row {
-			id: filterButtonsRowId
-			anchors.top: cleanFilterCheckBox.bottom
-			anchors.topMargin: 30
-			anchors.horizontalCenter: parent.horizontalCenter
-			AppButton {
-				id: clearFiltersButtonId
-				text: "Clear All"
-				onClicked: {
-					identityFilterCheckBox.checked = false
-					walkFilterCheckBox.checked = false
-					talkFilterCheckBox.checked = false
-					feedFilterCheckBox.checked = false
-					cleanFilterCheckBox.checked = false
-				}
-			}
-			AppButton {
-				id: markAllFiltersButtonId
-				text: "Check All"
-				onClicked: {
-					identityFilterCheckBox.checked = true
-					walkFilterCheckBox.checked = true
-					talkFilterCheckBox.checked = true
-					feedFilterCheckBox.checked = true
-					cleanFilterCheckBox.checked = true
-				}
-			}
-		}
-
-		Item {
-			id: dialogSpacer
-			height: 30
-			anchors.top: chairComboBox.bottom
-			anchors.topMargin: dp(5)
-		}
-	}
-
-	SortFilterProxyModel {
-		id: filteredStepModel
-		sourceModel: StepListModel {}
-		filters: [
-			RegExpFilter {
-				roleName: "Chair"
-				pattern: selectedChair
-				enabled: true
-			},
-			AnyOf {
-				ValueFilter {
-					roleName: "Identity"
-					value: true
-					enabled: identityFilter
-				}
-				ValueFilter {
-					roleName: "Walk"
-					value: true
-					enabled: walkFilter
-				}
-				ValueFilter {
-					roleName: "Talk"
-					value: true
-					enabled: talkFilter
-				}
-				ValueFilter {
-					roleName: "Feed"
-					value: true
-					enabled: feedFilter
-				}
-				ValueFilter {
-					roleName: "Clean"
-					value: true
-					enabled: cleanFilter
-				}
-			}
-		]
-	}
+    SortFilterProxyModel {
+        id: filteredStudentStepModel
+        sourceModel: StudentStepListModel {}
+        filters: [
+            RegExpFilter {
+                roleName: "Chair"
+                pattern: selectedChair
+                enabled: true
+            },
+            AnyOf {
+                ValueFilter {
+                    roleName: "Identity"
+                    value: true
+                    enabled: identityFilter
+                }
+                ValueFilter {
+                    roleName: "Walk"
+                    value: true
+                    enabled: walkFilter
+                }
+                ValueFilter {
+                    roleName: "Talk"
+                    value: true
+                    enabled: talkFilter
+                }
+                ValueFilter {
+                    roleName: "Feed"
+                    value: true
+                    enabled: feedFilter
+                }
+                ValueFilter {
+                    roleName: "Clean"
+                    value: true
+                    enabled: cleanFilter
+                }
+            }
+        ]
+    }
 }
 
 /*##^##
 Designer {
-	D{i:1;anchors_height:400;anchors_width:400;anchors_x:24;anchors_y:8}
+    D{i:1;anchors_height:400;anchors_width:400;anchors_x:24;anchors_y:8}
 }
 ##^##*/
 

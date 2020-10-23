@@ -81,8 +81,10 @@ Item {
 	Timer {
 		id: timer
 		interval: 400
-		onTriggered: console.log(
-						 Title + " has been toggled") //studentStepListView.model.remove(index)
+		onTriggered: {
+			console.log(Title + " has been toggled")
+			model.remove(index)
+		}
 	}
 
 	Rectangle {
