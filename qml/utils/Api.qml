@@ -73,7 +73,7 @@ Item {
         studentJsonData = jsonData
     }
 
-    // Move json data into studentJsonData so it's attached to JsonListModel
+    // Move json data into stepJsonData so it's attached to JsonListModel
     function stepJsonDataFetched(jsonData) {
         stepJsonData = jsonData
     }
