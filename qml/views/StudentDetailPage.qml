@@ -18,8 +18,12 @@ Page {
     property bool cleanFilter: true
     property bool filterBoxOpened: false
 
+    Api {
+        id: restApi
+    }
+
     Component.onCompleted: {
-        Api.getStudentStepData()
+        restApi.getStudentStepData()
     }
 
     rightBarItem: NavigationBarItem {

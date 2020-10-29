@@ -34,8 +34,8 @@ Item {
           HttpRequest.get(
                   "https://prod-15.northcentralus.logic.azure.com:443/workflows/1e4ac14513d949e0b46908d2a1135cc4/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=YTHqWy2x2Jw9vW54KFsfFAOFrtMWFKfVCACLHlZJWmw").then(
                         function (res) {
-                            console.log("Beginning logging request of students... ")
-                            console.log(res.status)
+                            /* console.log("Beginning logging request of students... ") */
+                            /* console.log(res.status) */
                             //console.log(JSON.stringify(res.header, null, 4))
                             //console.log(JSON.stringify(res.body, null, 4))
                             studentJsonDataFetched(res.body)
@@ -53,7 +53,7 @@ Item {
                             console.log("Beginning logging request of steps... ")
                             console.log(res.status)
                             /* console.log(JSON.stringify(res.header, null, 4)) */
-                            /* console.log(JSON.stringify(res.body, null, 4)) */
+                            console.log(JSON.stringify(res.body, null, 4))
                             stepJsonDataFetched(res.body)
                         }).catch(function (err) {
                               console.log(err.message)
@@ -63,9 +63,12 @@ Item {
 
     // Move json data into studentStepJsonData so it's attached to JsonListModel
     function studentStepJsonDataFetched(jsonData) {
-        studentStepJsonData = jsonData
-        console.log("Adding JsonData to StudentStepJsonData")
-        /* console.log(JSON.stringify(jsonData, null, 4)) */
+        /* studentStepJsonData = jsonData */
+        for (var i = 0; i < jsonData.length; i++) {
+
+        }
+        /* console.log("Adding JsonData to StudentStepJsonData") */
+        /* console.log(JSON.stringify(studentStepJsonData, null, 4)) */
     }
 
     // Move student json data into studentJsonData so it's attached to JsonListModel
