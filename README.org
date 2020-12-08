@@ -2,9 +2,9 @@
 * Intro
 This app is an attempt at making discipleship with people easier by offloading the effort onto technology and less reliance on ourselves to learn and remember the many possible life teaching moments that help us all get to know Jesus better. It's best suited for youth ministers who want to help teenagers get to know Jesus, and would like an easy place to keep track of where students are in their walk with Christ.
 
-The core of the process lies in the 4 Chair Discipleship method created by Dann Spader. https://4chairdiscipling.com
+The core of the process lies in the 4 Chair Discipleship method created by Dann Spader. [[https://4chairdiscipling.com]]
 
-This rendition of the process has been developed by Teens For Christ Connection for use within their youth ministry. You are more than welcome to use this for your own purposes. The app is developed by Chris Cochrun a staff member of TFC. mailto:chris@tfcconnection.org
+This rendition of the process has been developed by Teens For Christ Connection for use within their youth ministry. You are more than welcome to use this for your own purposes. The app is developed by Chris Cochrun a staff member of TFC. [[mailto:chris@tfcconnection.org]]
 
 * Description
 While the 4 chair language is embedded into the app, this language is not crucial to the process. The idea is that basically there are 4 stages of discipleship. They are broken up in the simplest way like this.
