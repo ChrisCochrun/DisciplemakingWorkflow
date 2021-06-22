@@ -108,7 +108,8 @@ Page {
             currentIndex: 0
             clip: false
 
-            model: filteredStudentStepModel
+            /* model: filteredStudentStepModel */
+	    model: filteredStudentStepModel
             delegate: StepListDelegate {}
         }
     }
@@ -164,8 +165,8 @@ Page {
         id: newStepDialog
         title: "New Step"
         anchors.centerIn: parent
-        //		height: parent.height - 150
-        //		width: parent.width - 100
+        //              height: parent.height - 150
+        //              width: parent.width - 100
         positiveActionLabel: "Save"
         negativeActionLabel: "Cancel"
         autoSize: true
@@ -414,6 +415,7 @@ Page {
                     talkFilterCheckBox.checked = false
                     feedFilterCheckBox.checked = false
                     cleanFilterCheckBox.checked = false
+		    console.log("all filters off")
                 }
             }
             AppButton {
@@ -425,6 +427,7 @@ Page {
                     talkFilterCheckBox.checked = true
                     feedFilterCheckBox.checked = true
                     cleanFilterCheckBox.checked = true
+		    console.log("all filters on")
                 }
             }
         }
@@ -437,9 +440,14 @@ Page {
         }
     }
 
+    JsonListModel {
+        id: listModel
+        source: studentStepListModel.steps
+        keyField: "ID"
+    }
     SortFilterProxyModel {
         id: filteredStudentStepModel
-        sourceModel: StudentStepListModel {}
+        sourceModel: listModel
         filters: [
             RegExpFilter {
                 roleName: "Chair"

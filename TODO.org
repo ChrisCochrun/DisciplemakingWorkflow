@@ -1,4 +1,4 @@
-#+TITLE: TODO
+#+TITLE: DMPTODO
 * Tasks
 ** DONE Filter Drop-down
 ** DONE Move Chair Combo Box to Filter Drop-down
@@ -9,6 +9,9 @@
   + Halfway there. I've got the steps to show the relevant chair that the student is in, but I need to instead get the steps to be based off the ones that the student has DONE.
   + I've got them into the app, but now need to filter steps off that new model
   + Got them filtered but they stopped showing up
+
+- [ ] Need to refactor how the model works
+  The model currently is a direct JSONListModel which apparently I'm supposed to create my own model with which the JsonListModel uses as a source instead.
 
 - [ ] Add and remove steps based off checking them off
 

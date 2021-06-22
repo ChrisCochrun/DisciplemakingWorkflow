@@ -3,7 +3,7 @@ import Felgo 3.0
 import "../utils"
 
 JsonListModel {
-	id: studentJsonDataModel
-	source: studentJsonData
-	keyField: "ID"
+    id: studentJsonDataModel
+    source: studentJsonData
+    keyField: "ID"
 }
