@@ -27,21 +27,21 @@ Page {
 
 		delegate: SimpleRow {
 			id: studentSimpleRow
-			text: FullName
-			detailText: "Chair " + Chair
-			style: StyleSimpleRow {
-				spacing: 12
-			}
-			onSelected: {
-				// Making sure variables are properly set so that the detail
-				// page gets the right info for each student.
-                selectedStudentName = FullName
-                selectedStudent = model
-                selectedChair = Chair
-                studentListPageId.navigationStack.popAllExceptFirstAndPush(
-							studentDetailPageComponent)
-				console.log("clicked student: " + FullName)
-			}
+			text: Name
+		    detailText: "Chair " + Chair
+		    style: StyleSimpleRow {
+			spacing: 12
+		    }
+		    onSelected: {
+			// Making sure variables are properly set so that the detail
+			// page gets the right info for each student.
+                        selectedStudentName = Name
+                        selectedStudent = model
+                        selectedChair = Chair
+                        studentListPageId.navigationStack.popAllExceptFirstAndPush(
+			    studentDetailPageComponent)
+			console.log("clicked student: " + Name)
+		    }
 		}
 
 		anchors.top: showListSearch ? studentSearchBar.bottom : parent.top
@@ -61,24 +61,17 @@ Page {
 		sourceModel: StudentListModel {}
 
 		sorters: StringSorter {
-			roleName: "FullName"
-			enabled: true
+			roleName: "Name"
+		    enabled: true
 		}
 
 		filters: AnyOf {
 			RegExpFilter {
 				id: studentFirstNameFilterId
-				roleName: "Title"
-				pattern: studentSearchBar.text
-				enabled: true
-				caseSensitivity: "CaseInsensitive"
-			}
-			RegExpFilter {
-				id: studentLastNameFilterId
-				roleName: "LastName"
-				pattern: studentSearchBar.text
-				enabled: true
-				caseSensitivity: "CaseInsensitive"
+			    roleName: "Name"
+			    pattern: studentSearchBar.text
+			    enabled: true
+			    caseSensitivity: "CaseInsensitive"
 			}
 		}
 	}

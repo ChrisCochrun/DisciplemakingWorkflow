@@ -6,77 +6,77 @@ import "../models"
 Page {
 	property var showStepListSearch: false
 
-	title: qsTr("Steps")
+    title: qsTr("Action Steps")
 
-	rightBarItem: NavigationBarItem {
-		IconButton {
-			anchors.right: parent.right
-			anchors.verticalCenter: parent.verticalCenter
-			anchors.rightMargin: dp(6)
-			icon: IconType.search
-			color: Theme.platform === "ios" ? "blue" : "white"
-			selectedIcon: IconType.times
-			toggle: true
-			onToggled: showStepListSearch = !showStepListSearch
-		}
+    rightBarItem: NavigationBarItem {
+	IconButton {
+	    anchors.right: parent.right
+	    anchors.verticalCenter: parent.verticalCenter
+	    anchors.rightMargin: dp(6)
+	    icon: IconType.search
+	    color: Theme.platform === "ios" ? "blue" : "white"
+	    selectedIcon: IconType.times
+	    toggle: true
+	    onToggled: showStepListSearch = !showStepListSearch
 	}
+    }
 
-	SearchBar {
-		id: stepSearchBar
-		visible: showStepListSearch
-	}
+    SearchBar {
+	id: stepSearchBar
+	visible: showStepListSearch
+    }
 
-	AppListView {
-		id: stepsList
-		height: parent.height
-		width: parent.width
+    AppListView {
+	id: stepsList
+	height: parent.height
+	width: parent.width
 
-		model: stepSortFilterProxyListModel
-		delegate: SimpleRow {
-			id: studentSimpleRow
-			text: Title
-			detailText: Chair.Value
-			style: StyleSimpleRow {
-				spacing: 12
-			}
+	model: stepSortFilterProxyListModel
+	delegate: SimpleRow {
+	    id: studentSimpleRow
+	    text: Title
+	    detailText: Chair.Value
+	    style: StyleSimpleRow {
+		spacing: 12
+	    }
             onSelected: {
                 // Making sure variables are properly set so that the detail
                 // page gets the right info for step.
                 stepListPageId.navigationStack.popAllExceptFirstAndPush(
-                            stepDetailPageComponent)
+                    stepDetailPageComponent)
                 selectedStepTitle = Title
                 selectedStep = model
                 console.log("clicked step: " + Title)
             }
 
-		}
-		anchors.top: showStepListSearch ? stepSearchBar.bottom : parent.top
-
 	}
-	SortFilterProxyModel {
-		id: stepSortFilterProxyListModel
-		sourceModel: StepListModel {}
+	anchors.top: showStepListSearch ? stepSearchBar.bottom : parent.top
 
-		sorters: StringSorter {
-			roleName: "Chair"
-			enabled: true
-		}
+    }
+    SortFilterProxyModel {
+	id: stepSortFilterProxyListModel
+	sourceModel: StepListModel {}
 
-		filters: AnyOf {
-			RegExpFilter {
-				id: studentFirstNameFilterId
-				roleName: "Title"
-				pattern: stepSearchBar.text
-				enabled: true
-				caseSensitivity: "CaseInsensitive"
-			}
-			RegExpFilter {
-				id: studentLastNameFilterId
-				roleName: "Chair"
-				pattern: stepSearchBar.text
-				enabled: true
-				caseSensitivity: "CaseInsensitive"
-			}
-		}
+	sorters: StringSorter {
+	    roleName: "Chair"
+	    enabled: true
 	}
+
+	filters: AnyOf {
+	    RegExpFilter {
+		id: studentFirstNameFilterId
+		roleName: "Title"
+		pattern: stepSearchBar.text
+		enabled: true
+		caseSensitivity: "CaseInsensitive"
+	    }
+	    RegExpFilter {
+		id: studentLastNameFilterId
+		roleName: "Chair"
+		pattern: stepSearchBar.text
+		enabled: true
+		caseSensitivity: "CaseInsensitive"
+	    }
+	}
+    }
 }

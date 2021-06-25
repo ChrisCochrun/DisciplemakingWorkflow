@@ -1,0 +1,1677 @@
+[
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "\"Time With\" a leader and other/younger teens.",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=1&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f1_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/1_.000",
+        "{FilenameWithExtension}": "\"Time With\" a leader and other/younger teens.",
+        "Title": "\"Time With\" a leader and other/younger teens.",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 1,
+        "Step_x003a_ID": {
+            "Value": "1",
+            "Id": 1,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 1,
+        "Step": {
+            "Value": "\"Time With\" a leader and other/younger teens.",
+            "Id": 1,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:23Z",
+        "ItemInternalId": "1",
+        "ID": 1,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:23Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Share scripture with them",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=3&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f3_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/3_.000",
+        "{FilenameWithExtension}": "Share scripture with them",
+        "Title": "Share scripture with them",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 3,
+        "Step_x003a_ID": {
+            "Value": "3",
+            "Id": 3,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 3,
+        "Step": {
+            "Value": "Share scripture with them",
+            "Id": 3,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:27Z",
+        "ItemInternalId": "3",
+        "ID": 3,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:27Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Pray for them weekly",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=4&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f4_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/4_.000",
+        "{FilenameWithExtension}": "Pray for them weekly",
+        "Title": "Pray for them weekly",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 4,
+        "Step_x003a_ID": {
+            "Value": "4",
+            "Id": 4,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 4,
+        "Step": {
+            "Value": "Pray for them weekly",
+            "Id": 4,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:29Z",
+        "ItemInternalId": "4",
+        "ID": 4,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:29Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Follow up from presenting the Gospel",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=5&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f5_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/5_.000",
+        "{FilenameWithExtension}": "Follow up from presenting the Gospel",
+        "Title": "Follow up from presenting the Gospel",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 5,
+        "Step_x003a_ID": {
+            "Value": "5",
+            "Id": 5,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 5,
+        "Step": {
+            "Value": "Follow up from presenting the Gospel",
+            "Id": 5,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:32Z",
+        "ItemInternalId": "5",
+        "ID": 5,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:32Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Be their friend them in at least 3 ways this week",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=6&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f6_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/6_.000",
+        "{FilenameWithExtension}": "Be their friend them in at least 3 ways this week",
+        "Title": "Be their friend them in at least 3 ways this week",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 6,
+        "Step_x003a_ID": {
+            "Value": "6",
+            "Id": 6,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 6,
+        "Step": {
+            "Value": "Be their friend them in at least 3 ways this week",
+            "Id": 6,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:32Z",
+        "ItemInternalId": "6",
+        "ID": 6,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:32Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Invite them to join you doing something",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=7&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f7_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/7_.000",
+        "{FilenameWithExtension}": "Invite them to join you doing something",
+        "Title": "Invite them to join you doing something",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 7,
+        "Step_x003a_ID": {
+            "Value": "7",
+            "Id": 7,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 7,
+        "Step": {
+            "Value": "Invite them to join you doing something",
+            "Id": 7,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:34Z",
+        "ItemInternalId": "7",
+        "ID": 7,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:34Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Pray with them",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=8&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f8_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/8_.000",
+        "{FilenameWithExtension}": "Pray with them",
+        "Title": "Pray with them",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 8,
+        "Step_x003a_ID": {
+            "Value": "8",
+            "Id": 8,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 8,
+        "Step": {
+            "Value": "Pray with them",
+            "Id": 8,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:36Z",
+        "ItemInternalId": "8",
+        "ID": 8,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:36Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Go through Disciplemaker Living Guide with someone in Chair 3",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=9&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f9_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/9_.000",
+        "{FilenameWithExtension}": "Go through Disciplemaker Living Guide with someone in Chair 3",
+        "Title": "Go through Disciplemaker Living Guide with someone in Chair 3",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 9,
+        "Step_x003a_ID": {
+            "Value": "9",
+            "Id": 9,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 9,
+        "Step": {
+            "Value": "Go through Disciplemaker Living Guide with someone in Chair 3",
+            "Id": 9,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:37Z",
+        "ItemInternalId": "9",
+        "ID": 9,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:37Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Send a note of encouragement or text saying what you see in them",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=10&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f10_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/10_.000",
+        "{FilenameWithExtension}": "Send a note of encouragement or text saying what you see in them",
+        "Title": "Send a note of encouragement or text saying what you see in them",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 10,
+        "Step_x003a_ID": {
+            "Value": "10",
+            "Id": 10,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 10,
+        "Step": {
+            "Value": "Send a note of encouragement or text saying what you see in them",
+            "Id": 10,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:40Z",
+        "ItemInternalId": "10",
+        "ID": 10,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:40Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Go through One Another Living Guide with someone in Chair 3",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=11&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f11_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/11_.000",
+        "{FilenameWithExtension}": "Go through One Another Living Guide with someone in Chair 3",
+        "Title": "Go through One Another Living Guide with someone in Chair 3",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 11,
+        "Step_x003a_ID": {
+            "Value": "11",
+            "Id": 11,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 11,
+        "Step": {
+            "Value": "Go through One Another Living Guide with someone in Chair 3",
+            "Id": 11,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:40Z",
+        "ItemInternalId": "11",
+        "ID": 11,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:40Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Go on a Mission Trip",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=12&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f12_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/12_.000",
+        "{FilenameWithExtension}": "Go on a Mission Trip",
+        "Title": "Go on a Mission Trip",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 12,
+        "Step_x003a_ID": {
+            "Value": "12",
+            "Id": 12,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 12,
+        "Step": {
+            "Value": "Go on a Mission Trip",
+            "Id": 12,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:42Z",
+        "ItemInternalId": "12",
+        "ID": 12,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:42Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Devo leader in training at Camp",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=13&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f13_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/13_.000",
+        "{FilenameWithExtension}": "Devo leader in training at Camp",
+        "Title": "Devo leader in training at Camp",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 13,
+        "Step_x003a_ID": {
+            "Value": "13",
+            "Id": 13,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 13,
+        "Step": {
+            "Value": "Devo leader in training at Camp",
+            "Id": 13,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:43Z",
+        "ItemInternalId": "13",
+        "ID": 13,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:43Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Go through John 3:16 Living Guide with someone in Chair 3",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=14&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f14_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/14_.000",
+        "{FilenameWithExtension}": "Go through John 3:16 Living Guide with someone in Chair 3",
+        "Title": "Go through John 3:16 Living Guide with someone in Chair 3",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 14,
+        "Step_x003a_ID": {
+            "Value": "14",
+            "Id": 14,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 14,
+        "Step": {
+            "Value": "Go through John 3:16 Living Guide with someone in Chair 3",
+            "Id": 14,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:45Z",
+        "ItemInternalId": "14",
+        "ID": 14,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:45Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Personal Bible Reading Plan",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=15&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f15_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/15_.000",
+        "{FilenameWithExtension}": "Personal Bible Reading Plan",
+        "Title": "Personal Bible Reading Plan",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 15,
+        "Step_x003a_ID": {
+            "Value": "15",
+            "Id": 15,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 15,
+        "Step": {
+            "Value": "Personal Bible Reading Plan",
+            "Id": 15,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:46Z",
+        "ItemInternalId": "15",
+        "ID": 15,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:46Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Bible study with a Leader",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=16&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f16_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/16_.000",
+        "{FilenameWithExtension}": "Bible study with a Leader",
+        "Title": "Bible study with a Leader",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 16,
+        "Step_x003a_ID": {
+            "Value": "16",
+            "Id": 16,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 16,
+        "Step": {
+            "Value": "Bible study with a Leader",
+            "Id": 16,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:47Z",
+        "ItemInternalId": "16",
+        "ID": 16,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:47Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Ministry Team",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=17&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f17_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/17_.000",
+        "{FilenameWithExtension}": "Ministry Team",
+        "Title": "Ministry Team",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 17,
+        "Step_x003a_ID": {
+            "Value": "17",
+            "Id": 17,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 17,
+        "Step": {
+            "Value": "Ministry Team",
+            "Id": 17,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:48Z",
+        "ItemInternalId": "17",
+        "ID": 17,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:48Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Disciplemaking Is Relationships Training ",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=18&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f18_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/18_.000",
+        "{FilenameWithExtension}": "Disciplemaking Is Relationships Training ",
+        "Title": "Disciplemaking Is Relationships Training ",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 18,
+        "Step_x003a_ID": {
+            "Value": "18",
+            "Id": 18,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 18,
+        "Step": {
+            "Value": "Disciplemaking Is Relationships Training ",
+            "Id": 18,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:49Z",
+        "ItemInternalId": "18",
+        "ID": 18,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:49Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Disciplemaker Living Guide with someone in Chair 2/3",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=19&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f19_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/19_.000",
+        "{FilenameWithExtension}": "Disciplemaker Living Guide with someone in Chair 2/3",
+        "Title": "Disciplemaker Living Guide with someone in Chair 2/3",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 19,
+        "Step_x003a_ID": {
+            "Value": "19",
+            "Id": 19,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 19,
+        "Step": {
+            "Value": "Disciplemaker Living Guide with someone in Chair 2/3",
+            "Id": 19,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:51Z",
+        "ItemInternalId": "19",
+        "ID": 19,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:51Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Ministry is Relationships Training",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=20&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f20_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/20_.000",
+        "{FilenameWithExtension}": "Ministry is Relationships Training",
+        "Title": "Ministry is Relationships Training",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 20,
+        "Step_x003a_ID": {
+            "Value": "20",
+            "Id": 20,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 20,
+        "Step": {
+            "Value": "Ministry is Relationships Training",
+            "Id": 20,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:51Z",
+        "ItemInternalId": "20",
+        "ID": 20,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:51Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "One Another Living guide with someone in Chair 2/3,",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=21&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f21_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/21_.000",
+        "{FilenameWithExtension}": "One Another Living guide with someone in Chair 2/3,",
+        "Title": "One Another Living guide with someone in Chair 2/3,",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 21,
+        "Step_x003a_ID": {
+            "Value": "21",
+            "Id": 21,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 21,
+        "Step": {
+            "Value": "One Another Living guide with someone in Chair 2/3,",
+            "Id": 21,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:51Z",
+        "ItemInternalId": "21",
+        "ID": 21,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:51Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Devo Leader at Camp",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=22&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f22_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/22_.000",
+        "{FilenameWithExtension}": "Devo Leader at Camp",
+        "Title": "Devo Leader at Camp",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 22,
+        "Step_x003a_ID": {
+            "Value": "22",
+            "Id": 22,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 22,
+        "Step": {
+            "Value": "Devo Leader at Camp",
+            "Id": 22,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:52Z",
+        "ItemInternalId": "22",
+        "ID": 22,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:52Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Ministry Team",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=23&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f23_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/23_.000",
+        "{FilenameWithExtension}": "Ministry Team",
+        "Title": "Ministry Team",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 23,
+        "Step_x003a_ID": {
+            "Value": "23",
+            "Id": 23,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 23,
+        "Step": {
+            "Value": "Ministry Team",
+            "Id": 23,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:53Z",
+        "ItemInternalId": "23",
+        "ID": 23,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:53Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Evangelism is Relationships Training",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=24&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f24_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/24_.000",
+        "{FilenameWithExtension}": "Evangelism is Relationships Training",
+        "Title": "Evangelism is Relationships Training",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 24,
+        "Step_x003a_ID": {
+            "Value": "24",
+            "Id": 24,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 24,
+        "Step": {
+            "Value": "Evangelism is Relationships Training",
+            "Id": 24,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:53Z",
+        "ItemInternalId": "24",
+        "ID": 24,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:53Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "John 3:16 Living Guide with someone in Chair 2/3",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=25&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f25_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/25_.000",
+        "{FilenameWithExtension}": "John 3:16 Living Guide with someone in Chair 2/3",
+        "Title": "John 3:16 Living Guide with someone in Chair 2/3",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 25,
+        "Step_x003a_ID": {
+            "Value": "25",
+            "Id": 25,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 25,
+        "Step": {
+            "Value": "John 3:16 Living Guide with someone in Chair 2/3",
+            "Id": 25,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:54Z",
+        "ItemInternalId": "25",
+        "ID": 25,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:54Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    },
+    {
+        "{VersionNumber}": "1.0",
+        "{Thumbnail}": {
+            "Small": null,
+            "Medium": null,
+            "Large": null
+        },
+        "{Path}": "Lists/StudentStep/",
+        "{Name}": "Choose 3 people to pray for specifically",
+        "{Link}": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/listform.aspx?PageType=4&ListId=f2c0d345%2D8015%2D4f03%2Dac50%2Da94e48d5e04b&ID=26&ContentTypeID=0x0100EE8EE4320C7A5F4B950FEDF03009B38D",
+        "{IsFolder}": false,
+        "{Identifier}": "Lists%252fStudentStep%252f26_.000",
+        "{HasAttachments}": false,
+        "{FullPath}": "Lists/StudentStep/26_.000",
+        "{FilenameWithExtension}": "Choose 3 people to pray for specifically",
+        "Title": "Choose 3 people to pray for specifically",
+        "Student_x003a_ID#Id": 266,
+        "Student_x003a_ID": {
+            "Value": "266",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Student#Id": 266,
+        "Student": {
+            "Value": "Kai Cox",
+            "Id": 266,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step_x003a_ID#Id": 26,
+        "Step_x003a_ID": {
+            "Value": "26",
+            "Id": 26,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Step#Id": 26,
+        "Step": {
+            "Value": "Choose 3 people to pray for specifically",
+            "Id": 26,
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"
+        },
+        "Modified": "2020-07-27T18:32:55Z",
+        "ItemInternalId": "26",
+        "ID": 26,
+        "Editor#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Editor": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "Created": "2020-07-27T18:32:55Z",
+        "Completed": false,
+        "Author#Claims": "i:0#.f|membership|chris@tfcconnection.org",
+        "Author": {
+            "Picture": "https://tfcconnection.sharepoint.com/sites/TeensForChrist/_layouts/15/UserPhoto.aspx?Size=L&AccountName=chris@tfcconnection.org",
+            "JobTitle": "TFC Staff & IT",
+            "Email": "chris@tfcconnection.org",
+            "DisplayName": "Chris Cochrun",
+            "Department": "Northern Valley",
+            "Claims": "i:0#.f|membership|chris@tfcconnection.org",
+            "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"
+        },
+        "@odata.etag": "\"1\""
+    }
+]

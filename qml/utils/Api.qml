@@ -5,69 +5,50 @@ import "../models"
 Item {
     id: restApi
 
-    // Httprequest to get data
-    function getStudentStepData() {
-        /* setSelectedChair(selectedChair) */
 
-        console.log("currentChair is " + selectedChair)
-        console.log("currentStudent is " + selectedStudent.FullName)
-        console.log("currentStudent id " + selectedStudent.ID)
+    function getAccessToken() {
 
-        /* studentStepListModel.clear() */
-
-        //Get StudentStep List from SharePoint
-        HttpRequest.get(
-            "https://prod-14.northcentralus.logic.azure.com:443/workflows/d17289c2621e40368acfe606eba67c1b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YUArtnSgsaBxk0PTX4DRqrwAAmQZxwWQkGZZTHm9JYU" + "&Student=" + selectedStudent.ID)
+        HttpRequest
+            .get("https://table.tfcconnection.org/api/v2.1/dtable/app-access-token/")
+            .set("Authorization", "Token 79466f33ae406153f537aab1194ab5f324760a2e")
             .then(
                 function (res) {
-                    /* console.log("Beginning logging request of StudentSteps... ") */
-                    /* console.log("Logging response status is: " + res.status) */
-                    /* console.log(JSON.stringify(res.header, null, 4)) */
-                    /* console.log(JSON.stringify(res.body, null, 4)) */
-                    studentStepJsonDataFetched(res.body)
-                }).catch(function (err) {
-                    console.log(err.message)
-                    console.log(err.response)
-                })
+                    var token = res.body.access_token
+                    accessToken = token
+                    getStudents()
+                    getSteps()
+                }
+            )
     }
 
-    function getStudentData() {
-        //Get students from SharePoint
-          HttpRequest.get(
-                  "https://prod-15.northcentralus.logic.azure.com:443/workflows/1e4ac14513d949e0b46908d2a1135cc4/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=YTHqWy2x2Jw9vW54KFsfFAOFrtMWFKfVCACLHlZJWmw").then(
-                        function (res) {
-                            /* console.log("Beginning logging request of students... ") */
-                            /* console.log(res.status) */
-                            //console.log(JSON.stringify(res.header, null, 4))
-                            //console.log(JSON.stringify(res.body, null, 4))
-                            studentJsonDataFetched(res.body)
-                        }).catch(function (err) {
-                            console.log(err.message)
-                            console.log(err.response)
-                        })
+    function getStudents() {
+        console.log("Getting students")
+        HttpRequest
+            .get("https://table.tfcconnection.org/dtable-server/api/v1/dtables/02bcc337-2b09-42c6-ae75-310599e710c6/rows/?table_name=Students&view_id=0000")
+            .set("Authorization", "Token " + accessToken)
+            .then(
+                function (res) {
+                    var rows = res.body.rows
+                    /* console.log(JSON.stringify(rows, null, 4)) */
+                    studentJsonDataFetched(rows)
+                }
+            )
     }
+    // Httprequest to get data
 
-    function getStepData() {
-        //Get steps from SharePoint
-          HttpRequest.get(
-                  "https://prod-08.northcentralus.logic.azure.com/workflows/9c3ae74f0be6447ea100d9943c5c8f9f/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=SLym0AsPf4wi8Jzz7qnvf7gT1wFbamVvhsD79ZJKLaM").then(
-                        function (res) {
-                            /* console.log("Beginning logging request of steps... ") */
-                            /* console.log(res.status) */
-                            /* console.log(JSON.stringify(res.header, null, 4)) */
-                            /* console.log(JSON.stringify(res.body, null, 4)) */
-                            stepJsonDataFetched(res.body)
-                        }).catch(function (err) {
-                              console.log(err.message)
-                              console.log(err.response)
-                        })
-    }
+    function getSteps() {
+        console.log("Gettings steps")
+        HttpRequest
+            .get("https://table.tfcconnection.org/dtable-server/api/v1/dtables/02bcc337-2b09-42c6-ae75-310599e710c6/rows/?table_name=Action Steps&view_id=0000")
+            .set("Authorization", "Token " + accessToken)
+            .then(
+                function (res) {
+                    var rows = res.body.rows
+                    stepJsonDataFetched(rows)
+                    console.log(rows[1].Title)
+                }
+            )
 
-    // Move json data into studentStepJsonData so it's attached to JsonListModel
-    function studentStepJsonDataFetched(jsonData) {
-        studentStepListModel.steps = jsonData
-        console.log("Adding JsonData to StudentStepJsonData")
-	/* console.log(JSON.stringify(jsonData, null, 4)) */
     }
 
     // Move student json data into studentJsonData so it's attached to JsonListModel
@@ -78,5 +59,6 @@ Item {
     // Move json data into stepJsonData so it's attached to JsonListModel
     function stepJsonDataFetched(jsonData) {
         stepJsonData = jsonData
+        /* console.log(Json.stringify(jstepJsonData, null, 4)) */
     }
 }
