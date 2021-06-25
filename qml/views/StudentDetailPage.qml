@@ -35,6 +35,7 @@ Page {
             .set("Authorization", "Token " + accessToken)
             .then(
                 function (res) {
+                    console.log(res.body)
                     studentPicture = res.body
                 }
             )

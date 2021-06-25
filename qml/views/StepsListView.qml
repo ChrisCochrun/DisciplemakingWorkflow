@@ -35,7 +35,7 @@ Page {
 	delegate: SimpleRow {
 	    id: studentSimpleRow
 	    text: Title
-	    detailText: Chair.Value
+	    detailText: "Chair " + Chair
 	    style: StyleSimpleRow {
 		spacing: 12
 	    }

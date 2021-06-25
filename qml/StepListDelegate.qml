@@ -1,6 +1,7 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 import Felgo 3.0
+import "./utils"
 
 Item {
 
@@ -8,6 +9,10 @@ Item {
     implicitHeight: dp(25) //chair === selectedChair ? 40 : -40 //selectedCategory in model ? 40 : 0
     width: parent.width
     visible: true //chair === selectedChair ? true : false //selectedCategory in model ? true : false
+
+    Api {
+        id: restApi
+    }
 
     Text {
         id: stepNameText
@@ -93,7 +98,7 @@ Item {
         interval: 400
         onTriggered: {
             console.log(Title + " has been toggled")
-            model.remove(index)
+            restApi.updateStudent(selectedStudent)
         }
     }
 

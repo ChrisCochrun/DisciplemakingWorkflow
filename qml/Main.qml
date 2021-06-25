@@ -44,6 +44,7 @@ App {
         tabPosition: Qt.BottomEdge
         drawerMinifyEnabled: true
 
+        // Comment this out till I create a login system
         /* check to see if logged in, if not open login page */
         /* Component.onCompleted: { */
         /*     if (!isLoggedIn) { */
@@ -95,7 +96,7 @@ App {
         }
     }
 
-    /* Component that loads the detail of student when student is selected */
+    /* Component that loads the detail of step when step is selected */
     Component {
         id: stepDetailPageComponent
         StepDetailPage {

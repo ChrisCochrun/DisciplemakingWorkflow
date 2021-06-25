@@ -61,4 +61,8 @@ Item {
         stepJsonData = jsonData
         /* console.log(Json.stringify(jstepJsonData, null, 4)) */
     }
+
+    function updateStudent(student) {
+        console.log(JSON.stringify(student, null, 4))
+    }
 }
