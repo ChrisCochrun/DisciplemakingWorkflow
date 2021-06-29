@@ -63,6 +63,51 @@ Item {
     }
 
     function updateStudent(student) {
-        console.log(JSON.stringify(student, null, 4))
+        console.log(student.Name)
+    }
+
+    function finishActionStep(step, student) {
+        console.log(step.Title)
+        console.log(step._id)
+        console.log(student.Name)
+        console.log(student._id)
+
+        
+        HttpRequest
+            .del("https://table.tfcconnection.org/dtable-server/api/v1/dtables/02bcc337-2b09-42c6-ae75-310599e710c6/links/")
+            .set("Authorization", "Token " + accessToken)
+            .accept("json")
+            .query({
+                "table_name": "Action Steps",
+                "other_table_name": "Students",
+                // This is the link id for the current students column
+                "link_id": "N9Zx",
+                "table_row_id": step._id,
+                "other_table_row_id": student._id
+            })
+            .then(
+                function (res) {
+                    console.log(res.status)
+                    console.log(JSON.stringify(res.body, null, 4))
+                }
+            )
+        HttpRequest
+            .post("https://table.tfcconnection.org/dtable-server/api/v1/dtables/02bcc337-2b09-42c6-ae75-310599e710c6/links/")
+            .set("Authorization", "Token " + accessToken)
+            .accept("json")
+            .send({
+                "table_name": "Action Steps",
+                "other_table_name": "Students",
+                // This is the link id for the finished students column
+                "link_id": "5UNS",
+                "table_row_id": step._id,
+                "other_table_row_id": student._id
+            })
+            .then(
+                function (res) {
+                    console.log(res.status)
+                    console.log(JSON.stringify(res.body, null, 4))
+                }
+            )
     }
 }

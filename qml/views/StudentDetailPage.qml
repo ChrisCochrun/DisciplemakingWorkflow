@@ -98,35 +98,46 @@ Page {
 
     Frame {
         id: stepsFrame
-        x: dp(10)
+        /* x: dp(10) */
         anchors.top: chairProgressBarId.bottom
-        anchors.topMargin: dp(20)
-        width: parent.width - dp(20)
-        height: parent.height / 1.5
+        anchors.topMargin: dp(40)
+        width: parent.width
+        height: parent.height - y
         hoverEnabled: true
         focusPolicy: Qt.StrongFocus
 
         background: Rectangle {
-            color: "transparent"
-            border.color: "red"//ThemeColors.dividerColor TODO need to add a real theme.
+            color: "lightgray"
+            border.color: "white"//ThemeColors.dividerColor TODO need to add a real theme.
             radius: 2
         }
 
         AppListView {
             id: studentStepListView
-            width: parent.width - 21
-            height: stepsFrame.availableHeight - 60
-            anchors.horizontalCenterOffset: dp(10)
+            /* width: parent.width - 21 */
+            height: parent.height - dp(60)
+            /* anchors.horizontalCenterOffset: dp(10) */
             anchors.top: parent.top
-            anchors.topMargin: dp(4)
-            spacing: height / dp(5)
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.topMargin: dp(20)
+            spacing: height / dp(6)
+            /* anchors.horizontalCenter: parent.horizontalCenter */
+            /* anchors.centerIn: parent */
             currentIndex: 0
-            clip: true
+            /* clip: true */
 
 	    model: listModel
             delegate: StepListDelegate {}
+            displayMarginBeginning: 40
+            displayMarginEnd: 60
         }
+
+        Rectangle {
+            id: topCover
+            anchors.top: parent.top
+            height: dp(5)
+            color: "lightgray"
+        }
+
     }
 
     RoundButton {
@@ -136,8 +147,8 @@ Page {
         icon.source: IconType.plus
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        anchors.rightMargin: dp(20)
-        anchors.bottomMargin: dp(20)
+        anchors.rightMargin: dp(15)
+        anchors.bottomMargin: dp(15)
         Icon {
             icon: IconType.plus
             anchors.centerIn: parent

@@ -8,6 +8,7 @@ Item {
     id: stepDelegateItem
     implicitHeight: dp(25) //chair === selectedChair ? 40 : -40 //selectedCategory in model ? 40 : 0
     width: parent.width
+    x: dp(10)
     visible: true //chair === selectedChair ? true : false //selectedCategory in model ? true : false
 
     Api {
@@ -18,9 +19,11 @@ Item {
         id: stepNameText
         text: Title
         elide: Text.ElideRight
-        width: parent.width - dp(60)
+        width: parent.width - dp(90)
         anchors.top: parent.top
         anchors.topMargin: dp(2)
+        font.bold: true
+        font.pointSize: sp(10)
     }
 
     Row {
@@ -32,7 +35,6 @@ Item {
             id: stepCatText
             text: "Category: "
             font.bold: true
-            anchors.top: parent.top
         }
         Text {
             id: identityDelText
@@ -82,12 +84,12 @@ Item {
 
     AppCheckBox {
         anchors.right: stepDelegateItem.right
-        anchors.rightMargin: studentStepListView.x + dp(5)
+        anchors.rightMargin: studentStepListView.x + dp(50)
         visible: !onStepsPage
         id: checkStep
-        anchors.top: stepNameText.top
-        anchors.topMargin: dp(-20)
-        checkBoxSize: Theme.isDesktop === true ? dp(30) : dp(30)
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: dp(8)
+        checkBoxSize: Theme.isDesktop === true ? dp(30) : dp(40)
         iconSize: Theme.isDesktop === true ? dp(20) : dp(20)
 
         onCheckedChanged: timer.start()
@@ -98,16 +100,19 @@ Item {
         interval: 400
         onTriggered: {
             console.log(Title + " has been toggled")
-            restApi.updateStudent(selectedStudent)
+            /* console.log("updateStudent API function: ") */
+            /* restApi.updateStudent(selectedStudent) */
+            console.log("finishActionStep API function: ")
+            restApi.finishActionStep(model, selectedStudent)
         }
     }
 
     Rectangle {
         id: seperatorRect
         anchors.top: chairText.bottom
-        anchors.topMargin: studentStepListView.spacing / dp(1.9)
+        anchors.topMargin: studentStepListView.spacing / dp(6)
         height: 1
-        width: parent.width - checkStep.anchors.rightMargin
-        color: "lightgray"
+        width: parent.width - dp(30)
+        color: "darkgray"
     }
 }
